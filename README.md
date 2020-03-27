@@ -66,7 +66,7 @@ Group Project - README Template
 [Add picture of your hand sketched wireframes in this section]
 <img src="wireframes/design_mockup_car_view.png" width=600>
 <img src="wireframes/fuel_view.png" width=600>
-<img src="wireframes/service_view.png" width=600>
+<img src="wireframes/service_record_view.png" width=600>
 <img src="wireframes/settings_view.png" width=600>
 
 ## Schema 
