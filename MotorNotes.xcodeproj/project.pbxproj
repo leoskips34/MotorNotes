@@ -15,6 +15,7 @@
 		D97FEAF2242DB46100BFDBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97FEAF0242DB46100BFDBD5 /* LaunchScreen.storyboard */; };
 		D97FEAFD242DB46100BFDBD5 /* MotorNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97FEAFC242DB46100BFDBD5 /* MotorNotesTests.swift */; };
 		D97FEB08242DB46100BFDBD5 /* MotorNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97FEB07242DB46100BFDBD5 /* MotorNotesUITests.swift */; };
+		D97FEB25243F037800BFDBD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D97FEB24243F037800BFDBD5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D97FEB03242DB46100BFDBD5 /* MotorNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotorNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97FEB07242DB46100BFDBD5 /* MotorNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorNotesUITests.swift; sourceTree = "<group>"; };
 		D97FEB09242DB46100BFDBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D97FEB24243F037800BFDBD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D97FEAF3242DB46100BFDBD5 /* Info.plist */,
+				D97FEB24243F037800BFDBD5 /* GoogleService-Info.plist */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D97FEAF2242DB46100BFDBD5 /* LaunchScreen.storyboard in Resources */,
+				D97FEB25243F037800BFDBD5 /* GoogleService-Info.plist in Resources */,
 				D97FEAEF242DB46100BFDBD5 /* Assets.xcassets in Resources */,
 				D97FEAED242DB45D00BFDBD5 /* Main.storyboard in Resources */,
 			);

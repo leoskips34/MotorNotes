@@ -166,3 +166,4 @@ Dependencies/
 
 ## Xcode Project
 MotorNotes.xcodeproj/project.pbxproj
+MotorNotes/Settings/GoogleService-Info.plist
