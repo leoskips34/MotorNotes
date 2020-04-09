@@ -164,4 +164,5 @@ Dependencies/
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.gitignore.io/api/swift,xcode,objective-c,osx
+## Xcode Project
+MotorNotes.xcodeproj/project.pbxproj
