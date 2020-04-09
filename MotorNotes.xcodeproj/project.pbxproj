@@ -105,7 +105,7 @@
 				D97FEAEB242DB45D00BFDBD5 /* Main.storyboard */,
 				D97FEAEE242DB46100BFDBD5 /* Assets.xcassets */,
 				D97FEAF0242DB46100BFDBD5 /* LaunchScreen.storyboard */,
-				D97FEAF3242DB46100BFDBD5 /* Info.plist */,
+				D97FEB1D243EFD4200BFDBD5 /* Settings */,
 			);
 			path = MotorNotes;
 			sourceTree = "<group>";
@@ -126,6 +126,14 @@
 				D97FEB09242DB46100BFDBD5 /* Info.plist */,
 			);
 			path = MotorNotesUITests;
+			sourceTree = "<group>";
+		};
+		D97FEB1D243EFD4200BFDBD5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D97FEAF3242DB46100BFDBD5 /* Info.plist */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
