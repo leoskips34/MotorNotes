@@ -158,3 +158,7 @@ Keep track of all your car related needs, from keeping track of mileage to track
     - (Delete) Delete the service record
 - Settings View
     - (Read/GET) Fetch information about user’s account
+
+## Build Progresses
+
+<img src='gifs/build_progress_1.gif' title='Build Progress 1' alt='Build Progress 1' />
