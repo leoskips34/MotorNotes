@@ -7,6 +7,9 @@ target 'MotorNotes' do
 
   # Pods for MotorNotes
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 
   target 'MotorNotesTests' do
     inherit! :search_paths
