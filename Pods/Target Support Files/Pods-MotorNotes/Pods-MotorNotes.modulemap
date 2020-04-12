@@ -1,6 +1,0 @@
-framework module Pods_MotorNotes {
-  umbrella header "Pods-MotorNotes-umbrella.h"
-
-  export *
-  module * { export * }
-}
