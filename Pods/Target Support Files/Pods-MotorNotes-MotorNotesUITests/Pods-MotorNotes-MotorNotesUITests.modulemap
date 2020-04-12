@@ -1,6 +1,0 @@
-framework module Pods_MotorNotes_MotorNotesUITests {
-  umbrella header "Pods-MotorNotes-MotorNotesUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
