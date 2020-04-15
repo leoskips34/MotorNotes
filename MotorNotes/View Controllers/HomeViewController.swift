@@ -10,6 +10,22 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBAction func addCarbutton(_ sender: Any) {
+        print ("Button prssed for add car")
+        
+        self.performSegue(withIdentifier: "AddCarSegue", sender: self)
+    }
+    
+    @IBAction func editCarbutton(_ sender: Any) {
+        print ("Button prssed for edit")
+               
+               self.performSegue(withIdentifier: "editCarSegue", sender: self)
+    }
+    
+    @IBAction func settingsButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "settingSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
