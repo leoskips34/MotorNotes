@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
                                             <segue destination="ZXL-F8-JaF" kind="presentation" id="SHd-Fr-BfN"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou8-If-eRY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou8-If-eRY">
                                         <rect key="frame" x="0.0" y="267.5" width="295" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,7 +125,7 @@
                                             <action selector="signUpTapped:" destination="ZXL-F8-JaF" eventType="touchUpInside" id="1MR-Op-8sx"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrA-kQ-y6T">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrA-kQ-y6T">
                                         <rect key="frame" x="0.0" y="350" width="295" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -201,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sme-2f-lbU">
-                                <rect key="frame" x="283" y="19" width="76" height="32"/>
+                                <rect key="frame" x="283" y="55" width="76" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Add a Car">
@@ -219,11 +219,11 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="settingsButton:" destination="xJl-Q7-ePU" eventType="touchUpInside" id="M7q-MT-l5b"/>
+                                    <segue destination="EaU-zt-eB3" kind="presentation" id="lAB-86-oTu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSs-IR-kN4">
-                                <rect key="frame" x="16" y="20" width="62" height="32"/>
+                                <rect key="frame" x="16" y="55" width="62" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Edit Car">
@@ -238,16 +238,16 @@
                         <viewLayoutGuide key="safeArea" id="aB2-n8-WUt"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Home" id="5Sp-7d-KP1"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="RdW-N8-GvD" kind="showDetail" identifier="editCarSegue" id="xJ9-kC-Okw"/>
                         <segue destination="9BB-3n-toH" kind="showDetail" identifier="AddCarSegue" id="XWh-aW-J2d"/>
-                        <segue destination="wcS-pE-r72" kind="showDetail" identifier="settingSegue" id="sz9-eI-4Si"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqQ-rz-fPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264.8000000000002" y="124.58770614692655"/>
+            <point key="canvasLocation" x="3204" y="124.58770614692655"/>
         </scene>
         <!--Edit Car View Controller-->
         <scene sceneID="QwN-np-Naf">
@@ -287,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tk-wY-Zon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264.8000000000002" y="893.70314842578716"/>
+            <point key="canvasLocation" x="5002" y="125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dLf-dm-2Uf">
@@ -406,7 +406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWU-vR-jR1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3336.8000000000002" y="833.43328335832086"/>
+            <point key="canvasLocation" x="6073" y="-350"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dk6-XK-Bbr">
@@ -538,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjM-Kc-URE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3337" y="1541"/>
+            <point key="canvasLocation" x="6074" y="497"/>
         </scene>
         <!--Add car-->
         <scene sceneID="rZB-pp-6uO">
@@ -662,31 +662,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3V-Xm-GSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3337" y="125"/>
+            <point key="canvasLocation" x="4318" y="-620"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="l2a-h0-tfT">
+        <!--Settings View Controller-->
+        <scene sceneID="4HD-Tt-mvh">
             <objects>
-                <viewController title="Settings" id="wcS-pE-r72" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YDY-1x-QGY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                <viewController modalPresentationStyle="fullScreen" id="EaU-zt-eB3" customClass="SettingsViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lp6-jx-RzE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRf-cl-WrG">
-                                <rect key="frame" x="134" y="299" width="106" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-4I-3jy">
+                                <rect key="frame" x="134" y="309" width="106" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7s-CB-MCs">
+                                <rect key="frame" x="163" y="445" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="EaU-zt-eB3" eventType="touchUpInside" id="YfH-TF-lYw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="VJi-lj-VWK"/>
+                        <viewLayoutGuide key="safeArea" id="aIT-Sx-fAP"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zdF-3N-Vy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JpS-TA-qm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4208.8000000000002" y="832.53373313343332"/>
+            <point key="canvasLocation" x="3204" y="951"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bCe-Zm-IN0">
@@ -704,6 +712,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0CY-xR-6jK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="124.58770614692655"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YSf-z7-c9e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="VdN-Ao-cbX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MJR-UQ-OlX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xJl-Q7-ePU" kind="relationship" relationship="rootViewController" id="Pl0-Aw-78m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8k-ag-938" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2264.8000000000002" y="124.58770614692655"/>
         </scene>
     </scenes>
     <resources>

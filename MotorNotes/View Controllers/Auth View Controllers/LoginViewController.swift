@@ -16,12 +16,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setUpElements()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if userDefault.bool(forKey: "usersignedin") {
+            transitionToHome()
+        }
     }
     
     func setUpElements() {
@@ -51,22 +58,32 @@ class LoginViewController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         
         // Validate text fields
+        let error = validateFields()
         
-        // Create cleaned versions of data
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        // Signing in the user
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        if error != nil {
+            showError(error!)
+        } else {
+            // Create cleaned versions of data
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            if error != nil {
-                // couldn't sign in
-                self.errorLabel.text = error!.localizedDescription
-                self.errorLabel.alpha = 1
-            } else {
-                self.transitionToHome()
+            // Signing in the user
+            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+                
+                if err != nil {
+                    // couldn't sign in
+                    self.showError(err!.localizedDescription)
+                } else {
+                    Constants.authPersistence(true)
+                    self.transitionToHome()
+                }
             }
         }
+    }
+    
+    func showError(_ message: String) {
+        errorLabel.text = message
+        errorLabel.alpha = 1
     }
     
     func transitionToHome() {
