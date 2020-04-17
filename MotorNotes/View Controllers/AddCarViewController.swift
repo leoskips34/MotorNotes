@@ -12,10 +12,10 @@ import FirebaseFirestore
 
 class AddCarViewController: UIViewController {
 
-    
     @IBOutlet weak var carNicknameTextField: UITextField!
     @IBOutlet weak var carMakeTextField: UITextField!
     @IBOutlet weak var carModelTextField: UITextField!
+    @IBOutlet weak var carYearTextField: UITextField!
     @IBOutlet weak var carOdometerTextField: UITextField!
     @IBOutlet weak var carLicensePlateTextField: UITextField!
     @IBOutlet weak var carVinTextField: UITextField!
@@ -29,8 +29,7 @@ class AddCarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Hide error label
-        errorLabel.alpha = 0
+        viewControllerDesigns()
 
         // Initial setup
         let settings = FirestoreSettings()
@@ -38,16 +37,35 @@ class AddCarViewController: UIViewController {
         
         // End setup
         db = Firestore.firestore()
-        
-        
     }
     
+    // MARK: - View Controller design aspects
+    func viewControllerDesigns() {
+        
+        // Hide error label
+        errorLabel.alpha = 0
+        
+        // Text field and button designs
+        Utilities.styleTextField(carNicknameTextField)
+        Utilities.styleTextField(carMakeTextField)
+        Utilities.styleTextField(carModelTextField)
+        Utilities.styleTextField(carYearTextField)
+        Utilities.styleTextField(carOdometerTextField)
+        Utilities.styleTextField(carLicensePlateTextField)
+        Utilities.styleTextField(carVinTextField)
+        Utilities.styleTextField(carRegistrationDateTextField)
+        Utilities.styleTextField(carColorTextField)
+        Utilities.styleFilledButton(saveVehicleButton)
+    }
+    
+    // MARK: - Form validation
     func validateVehicleFields() -> String? {
         
         // Check that all fields are filled in
         if carNicknameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             carMakeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             carModelTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            carYearTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             carOdometerTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             carLicensePlateTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             carVinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -59,6 +77,7 @@ class AddCarViewController: UIViewController {
         return nil
     }
     
+    // MARK: - Firestore Create
     func createVehicle() {
         
         // Validate fields
@@ -75,6 +94,7 @@ class AddCarViewController: UIViewController {
             let carNickname = carNicknameTextField.text!
             let carMake = carMakeTextField.text!
             let carModel = carModelTextField.text!
+            let carYear = carYearTextField.text!
             let carOdometer = carOdometerTextField.text!
             let carLicensePlate = carLicensePlateTextField.text!
             let carVIN = carVinTextField.text!
@@ -88,6 +108,7 @@ class AddCarViewController: UIViewController {
                 "carnickname": carNickname,
                 "make": carMake,
                 "model": carModel,
+                "year": carYear,
                 "odometer": carOdometer,
                 "licenseplatenumber": carLicensePlate,
                 "vinnumber": carVIN,
@@ -104,5 +125,12 @@ class AddCarViewController: UIViewController {
 
     @IBAction func saveVehicleTapped(_ sender: Any) {
         createVehicle()
+        
+        let error = validateVehicleFields()
+        
+        if error == nil {
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
