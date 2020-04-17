@@ -22,11 +22,15 @@ class AddCarViewController: UIViewController {
     @IBOutlet weak var carRegistrationDateTextField: UITextField!
     @IBOutlet weak var carColorTextField: UITextField!
     @IBOutlet weak var saveVehicleButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var db: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Hide error label
+        errorLabel.alpha = 0
 
         // Initial setup
         let settings = FirestoreSettings()
@@ -51,6 +55,7 @@ class AddCarViewController: UIViewController {
             carColorTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please fill in all fields"
         }
+        
         return nil
     }
     
@@ -62,6 +67,7 @@ class AddCarViewController: UIViewController {
         if error != nil {
             
             // Something wrong with the fields, show error message
+            Utilities.showError(errorLabel, message: error!)
             
         } else {
             
@@ -87,8 +93,8 @@ class AddCarViewController: UIViewController {
                 "vinnumber": carVIN,
                 "registrationdate": carRegistration,
                 "carcolor": carColor,], completion: { (err) in
-                    if let err = err {
-                        print("Error adding document: \(err)")
+                    if err != nil {
+                        Utilities.showError(self.errorLabel, message: err!.localizedDescription)
                     } else {
                         print("Added vehicle with ID: \(ref!.documentID)")
                     }

@@ -61,8 +61,11 @@ class LoginViewController: UIViewController {
         let error = validateFields()
         
         if error != nil {
-            showError(error!)
+            
+            // Show error message if something is wrong with the fields
+            Utilities.showError(errorLabel, message: error!)
         } else {
+            
             // Create cleaned versions of data
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -72,18 +75,13 @@ class LoginViewController: UIViewController {
                 
                 if err != nil {
                     // couldn't sign in
-                    self.showError(err!.localizedDescription)
+                    Utilities.showError(self.errorLabel, message: err!.localizedDescription)
                 } else {
                     Constants.authPersistence(true)
                     self.transitionToHome()
                 }
             }
         }
-    }
-    
-    func showError(_ message: String) {
-        errorLabel.text = message
-        errorLabel.alpha = 1
     }
     
     func transitionToHome() {

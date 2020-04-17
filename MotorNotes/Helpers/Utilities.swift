@@ -52,4 +52,9 @@ class Utilities {
         
         return passwordTest.evaluate(with: password)
     }
+    
+    static func showError(_ label: UILabel, message: String) {
+        label.text = message
+        label.alpha = 1
+    }
 }
