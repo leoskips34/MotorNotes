@@ -16,12 +16,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setUpElements()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if userDefault.bool(forKey: "usersignedin") {
+            transitionToHome()
+        }
     }
     
     func setUpElements() {
@@ -51,20 +58,28 @@ class LoginViewController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         
         // Validate text fields
+        let error = validateFields()
         
-        // Create cleaned versions of data
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        // Signing in the user
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        if error != nil {
             
-            if error != nil {
-                // couldn't sign in
-                self.errorLabel.text = error!.localizedDescription
-                self.errorLabel.alpha = 1
-            } else {
-                self.transitionToHome()
+            // Show error message if something is wrong with the fields
+            Utilities.showError(errorLabel, message: error!)
+        } else {
+            
+            // Create cleaned versions of data
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // Signing in the user
+            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+                
+                if err != nil {
+                    // couldn't sign in
+                    Utilities.showError(self.errorLabel, message: err!.localizedDescription)
+                } else {
+                    Constants.authPersistence(true)
+                    self.transitionToHome()
+                }
             }
         }
     }

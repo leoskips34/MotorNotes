@@ -68,7 +68,7 @@ class SignUpViewController: UIViewController {
         if error != nil {
             
             // Something wrong with the fields, show error message
-            showError(error!)
+            Utilities.showError(errorLabel, message: error!)
         } else {
             
             // Create cleaned versions of data
@@ -84,18 +84,17 @@ class SignUpViewController: UIViewController {
                 if err != nil {
                     
                     // Error creating a user
-                    self.showError("Error creating user")
+                    Utilities.showError(self.errorLabel, message: "Error creating user")
                 } else {
                     
                     // User was created successfully; store first name and last name
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["firstname": firstName, "lastname": lastName, "uid": result!.user.uid]) { (error) in
-                        
+                    db.collection("users").document(result!.user.uid).setData(["firstname": firstName, "lastname": lastName]) { (error) in
                         if error != nil {
                             
                             // Show error message
-                            self.showError("Error saving user data")
+                            Utilities.showError(self.errorLabel, message: "Error saving user data")
                         }
                     }
                     
@@ -104,12 +103,6 @@ class SignUpViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    func showError(_ message: String) {
-        
-        errorLabel.text = message
-        errorLabel.alpha = 1
     }
     
     func transitionToHome() {
