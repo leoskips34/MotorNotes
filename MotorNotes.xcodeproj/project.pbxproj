@@ -25,6 +25,8 @@
 		D97FEAF2242DB46100BFDBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97FEAF0242DB46100BFDBD5 /* LaunchScreen.storyboard */; };
 		D97FEAFD242DB46100BFDBD5 /* MotorNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97FEAFC242DB46100BFDBD5 /* MotorNotesTests.swift */; };
 		D97FEB08242DB46100BFDBD5 /* MotorNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97FEB07242DB46100BFDBD5 /* MotorNotesUITests.swift */; };
+		D9899E70244A5FC0001549D2 /* AddFuelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9899E6F244A5FC0001549D2 /* AddFuelViewController.swift */; };
+		D9899E72244A5FDB001549D2 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9899E71244A5FDB001549D2 /* AddServiceViewController.swift */; };
 		D9F644012446CF970074344E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9F644002446CF970074344E /* GoogleService-Info.plist */; };
 		D9F644032448A6340074344E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F644022448A6330074344E /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,8 @@
 		D97FEB03242DB46100BFDBD5 /* MotorNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotorNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97FEB07242DB46100BFDBD5 /* MotorNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorNotesUITests.swift; sourceTree = "<group>"; };
 		D97FEB09242DB46100BFDBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9899E6F244A5FC0001549D2 /* AddFuelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFuelViewController.swift; sourceTree = "<group>"; };
+		D9899E71244A5FDB001549D2 /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		D9F644002446CF970074344E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9F644022448A6330074344E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DC20B555D5FAC3155BB81BB2 /* Pods-MotorNotes-MotorNotesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotes-MotorNotesUITests.debug.xcconfig"; path = "Target Support Files/Pods-MotorNotes-MotorNotesUITests/Pods-MotorNotes-MotorNotesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				D94D615124428B1600613DE4 /* HomeViewController.swift */,
 				CDAA0422244587AD0017AF8B /* AddCarViewController.swift */,
 				D9F644022448A6330074344E /* SettingsViewController.swift */,
+				D9899E6F244A5FC0001549D2 /* AddFuelViewController.swift */,
+				D9899E71244A5FDB001549D2 /* AddServiceViewController.swift */,
 				D94D615024428AEE00613DE4 /* Auth View Controllers */,
 			);
 			path = "View Controllers";
@@ -470,9 +476,11 @@
 				D94D614D24428AD000613DE4 /* LoginViewController.swift in Sources */,
 				D97FEAEA242DB45D00BFDBD5 /* ViewController.swift in Sources */,
 				D9F644032448A6340074344E /* SettingsViewController.swift in Sources */,
+				D9899E72244A5FDB001549D2 /* AddServiceViewController.swift in Sources */,
 				CDAA041F2443A7280017AF8B /* SignUpViewController.swift in Sources */,
 				CDAA0423244587AD0017AF8B /* AddCarViewController.swift in Sources */,
 				D952D7A32442942500CE239A /* Utilities.swift in Sources */,
+				D9899E70244A5FC0001549D2 /* AddFuelViewController.swift in Sources */,
 				D97FEAE6242DB45D00BFDBD5 /* AppDelegate.swift in Sources */,
 				D97FEAE8242DB45D00BFDBD5 /* SceneDelegate.swift in Sources */,
 				D94D615224428B1600613DE4 /* HomeViewController.swift in Sources */,
@@ -655,6 +663,7 @@
 				DEVELOPMENT_TEAM = NYLV7H6AAY;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MotorNotes/Settings/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,6 +685,7 @@
 				DEVELOPMENT_TEAM = NYLV7H6AAY;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MotorNotes/Settings/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
