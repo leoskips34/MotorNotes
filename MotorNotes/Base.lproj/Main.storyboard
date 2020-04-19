@@ -3,7 +3,6 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,17 +40,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR8-6r-IdO">
                                         <rect key="frame" x="0.0" y="210" width="295" height="37.5"/>
-
-
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
-
-       7.5"/>
-
-                                        <rect key="frame" x="0.0" y="210.00000000000006" width="334" height="37.333333333333343"/>
-
-
                                         <state key="normal" title="No account? Sign up!"/>
                                         <connections>
                                             <segue destination="ZXL-F8-JaF" kind="show" id="SHd-Fr-BfN"/>
@@ -82,13 +70,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rM2-es-KUd" secondAttribute="trailing" constant="40" id="unW-Mn-FeD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="dwn-Z7-Bft"/>
-
-                
-                    <navigationItem key="navigationItem" id="dwn-Z7-Bft"/>
-
                     <connections>
                         <outlet property="emailTextField" destination="6A1-HS-hDg" id="BOc-if-TmD"/>
                         <outlet property="errorLabel" destination="ou8-If-eRY" id="hOk-Qg-wdm"/>
