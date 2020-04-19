@@ -110,7 +110,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rM2-es-KUd" secondAttribute="trailing" constant="40" id="unW-Mn-FeD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
+                
                     <navigationItem key="navigationItem" id="dwn-Z7-Bft"/>
                     <connections>
                         <outlet property="emailTextField" destination="6A1-HS-hDg" id="BOc-if-TmD"/>
