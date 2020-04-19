@@ -10,6 +10,12 @@ import UIKit
 
 class AddServiceViewController: UIViewController {
 
+    
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "backToEditSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

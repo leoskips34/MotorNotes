@@ -186,7 +186,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" title="Home" id="xJl-Q7-ePU" customClass="HomeViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aV1-DQ-fGW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQT-WZ-8wq">
@@ -194,14 +194,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.37618586923962538" blue="0.012590001478477997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf3-Nq-lEM">
-                                <rect key="frame" x="307" y="574" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="FAQ">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="a2f-3d-MhN">
                                 <rect key="frame" x="-10" y="306" width="385" height="274"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -231,17 +223,6 @@
                                     <action selector="addCarbutton:" destination="xJl-Q7-ePU" eventType="touchUpInside" id="VFR-pu-BOQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQm-vO-n4N">
-                                <rect key="frame" x="14" y="575" width="66" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="EaU-zt-eB3" kind="show" id="lAB-86-oTu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSs-IR-kN4">
                                 <rect key="frame" x="16" y="55" width="62" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -250,7 +231,21 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+
+                                    <segue destination="EaU-zt-eB3" kind="show" id="lAB-86-oTu"/>
+
                                     <action selector="editCarbutton:" destination="xJl-Q7-ePU" eventType="touchUpInside" id="9Zx-o3-xTg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQm-vO-n4N">
+                                <rect key="frame" x="149" y="604" width="66" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EaU-zt-eB3" kind="presentation" id="lAB-86-oTu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -274,7 +269,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="RdW-N8-GvD" customClass="EditCarViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cLY-4q-uLO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO4-iy-gQj">
@@ -300,34 +295,48 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2B-xE-8gC">
+                                <rect key="frame" x="16" y="71" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backHome:" destination="9BB-3n-toH" eventType="touchUpInside" id="IeM-oF-TRh"/>
+                                    <action selector="backHomeButton:" destination="RdW-N8-GvD" eventType="touchUpInside" id="qg3-zF-3VR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Z51-j7-ROq"/>
                     </view>
                     <navigationItem key="navigationItem" id="8j4-CA-lax"/>
+                    <connections>
+                        <segue destination="xJl-Q7-ePU" kind="showDetail" identifier="backHomeButtonSegue" id="KjY-A3-TAy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tk-wY-Zon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5002" y="125"/>
+            <point key="canvasLocation" x="5030" y="107"/>
         </scene>
         <!--Add Fuel View Controller-->
         <scene sceneID="dLf-dm-2Uf">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="1tV-d6-qfD" customClass="AddFuelViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NeF-XU-g0Q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UhT-wA-Gg7">
-                                <rect key="frame" x="15" y="59" width="345" height="593"/>
+                                <rect key="frame" x="15" y="15" width="345" height="617"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fuel Record Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pC-AC-BPk">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-mZ-YMx">
-                                        <rect key="frame" x="0.0" y="53" width="345" height="134"/>
+                                        <rect key="frame" x="0.0" y="49" width="345" height="134"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cr8-6E-Uhb">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="134"/>
@@ -361,46 +370,56 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ / gallon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vns-H3-l9Z">
-                                        <rect key="frame" x="0.0" y="202" width="345" height="34"/>
+                                        <rect key="frame" x="0.0" y="198" width="345" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Cost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVD-VU-JCT">
-                                        <rect key="frame" x="0.0" y="251" width="345" height="34"/>
+                                        <rect key="frame" x="0.0" y="247" width="345" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gas Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LzA-id-5Uc">
-                                        <rect key="frame" x="0.0" y="300" width="345" height="34"/>
+                                        <rect key="frame" x="0.0" y="296" width="345" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mt-Nf-xVb">
-                                        <rect key="frame" x="0.0" y="349" width="345" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="345" width="345" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Cv-NS-9aJ">
-                                        <rect key="frame" x="0.0" y="384.5" width="345" height="123"/>
+                                        <rect key="frame" x="0.0" y="380.5" width="345" height="106"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz9-nf-7Q0">
-                                        <rect key="frame" x="0.0" y="522.5" width="345" height="35"/>
+                                        <rect key="frame" x="0.0" y="501.5" width="345" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="VUp-la-bVT"/>
                                         </constraints>
                                         <state key="normal" title="Save Fuel Record"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av1-ay-e2w">
-                                        <rect key="frame" x="0.0" y="572.5" width="345" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="551.5" width="345" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0l-vb-usi">
+                                        <rect key="frame" x="0.0" y="587" width="345" height="30"/>
+                                        <state key="normal" title="&lt;Back">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backHome:" destination="9BB-3n-toH" eventType="touchUpInside" id="xhl-8b-WqM"/>
+                                            <action selector="backToEditPage:" destination="1tV-d6-qfD" eventType="touchUpInside" id="mjY-kL-gvh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -414,15 +433,18 @@
                         <viewLayoutGuide key="safeArea" id="psJ-ma-ZFR"/>
                     </view>
                     <navigationItem key="navigationItem" id="1Rq-L2-CBU"/>
+                    <connections>
+                        <segue destination="RdW-N8-GvD" kind="showDetail" identifier="backToEditPageSegue" id="sG4-fJ-HYC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWU-vR-jR1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6073" y="-350"/>
+            <point key="canvasLocation" x="6017" y="-554"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Service View Controller-->
         <scene sceneID="dk6-XK-Bbr">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="UhJ-gh-zbR" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="UhJ-gh-zbR" customClass="AddServiceViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dgs-Hr-KIM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -542,26 +564,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeX-RZ-CZZ">
+                                <rect key="frame" x="24" y="617" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="UhJ-gh-zbR" eventType="touchUpInside" id="0VD-eU-YEW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TNJ-fQ-yv6"/>
                     </view>
                     <navigationItem key="navigationItem" id="jHK-Ah-tb9"/>
+                    <connections>
+                        <segue destination="RdW-N8-GvD" kind="showDetail" identifier="backToEditSegue" id="SSD-b4-deK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjM-Kc-URE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6074" y="497"/>
+            <point key="canvasLocation" x="6017" y="748"/>
         </scene>
         <!--Add car-->
         <scene sceneID="rZB-pp-6uO">
             <objects>
                 <viewController title="Add car" modalPresentationStyle="fullScreen" id="9BB-3n-toH" customClass="AddCarViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sUN-9R-ThE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vzh-X5-yub">
-                                <rect key="frame" x="15" y="59" width="345" height="593"/>
+                                <rect key="frame" x="15" y="15" width="345" height="568"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Car Nickname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lX-Qy-sYi">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="35"/>
@@ -639,7 +674,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0Z-aS-Da4">
-                                        <rect key="frame" x="0.0" y="500" width="345" height="93"/>
+                                        <rect key="frame" x="0.0" y="500" width="345" height="68"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -654,6 +689,16 @@
                                     <constraint firstItem="TRh-Ip-Ixw" firstAttribute="height" secondItem="6lX-Qy-sYi" secondAttribute="height" id="ymb-PO-eai"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2B-IQ-QlY">
+                                <rect key="frame" x="23" y="626" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backHome:" destination="9BB-3n-toH" eventType="touchUpInside" id="9YP-eS-PK8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -664,7 +709,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lho-0c-pwP"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Car" id="nWJ-7n-R1X"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="jXk-mF-Myy"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="carColorTextField" destination="TRh-Ip-Ixw" id="9Qk-ys-Dy8"/>
                         <outlet property="carLicensePlateTextField" destination="fF4-mU-0E1" id="lrJ-OQ-Cak"/>
@@ -677,11 +724,12 @@
                         <outlet property="carYearTextField" destination="78f-4Q-Jpp" id="GCC-iP-m3r"/>
                         <outlet property="errorLabel" destination="h0Z-aS-Da4" id="YfA-EM-8Rl"/>
                         <outlet property="saveVehicleButton" destination="0HY-Ev-95I" id="FKe-4l-5qL"/>
+                        <segue destination="xJl-Q7-ePU" kind="showDetail" identifier="backHomeSegue" id="GHH-CI-kih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3V-Xm-GSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4317.6000000000004" y="-620.23988005997012"/>
+            <point key="canvasLocation" x="4233" y="-722"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="4HD-Tt-mvh">
@@ -691,12 +739,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-4I-3jy">
-                                <rect key="frame" x="134" y="309" width="106" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-4I-3jy">
+                                <rect key="frame" x="118" y="20" width="138" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7s-CB-MCs">
                                 <rect key="frame" x="163" y="445" width="48" height="30"/>
@@ -706,15 +754,35 @@
                                     <action selector="logoutTapped:" destination="EaU-zt-eB3" eventType="touchUpInside" id="YfH-TF-lYw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-4S-DlD">
+                                <rect key="frame" x="163" y="566" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backHomeButton:" destination="EaU-zt-eB3" eventType="touchUpInside" id="mPK-ZH-9wL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ez-db-aV0">
+                                <rect key="frame" x="172" y="140" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="FAQ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="aIT-Sx-fAP"/>
                     </view>
                     <navigationItem key="navigationItem" id="REc-fo-cHV"/>
+                    <connections>
+                        <segue destination="xJl-Q7-ePU" kind="showDetail" identifier="backHomeSegue" id="kvj-nr-64w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JpS-TA-qm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3204" y="951"/>
+            <point key="canvasLocation" x="3204" y="950.37481259370327"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bCe-Zm-IN0">
@@ -756,6 +824,10 @@
             <point key="canvasLocation" x="2264.8000000000002" y="124.58770614692655"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xJ9-kC-Okw"/>
+        <segue reference="kvj-nr-64w"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="car" width="214.33332824707031" height="114"/>
     </resources>

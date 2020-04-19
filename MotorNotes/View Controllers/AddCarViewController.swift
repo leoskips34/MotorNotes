@@ -11,7 +11,14 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class AddCarViewController: UIViewController {
-
+    
+    
+    @IBAction func backHome(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "backHomeSegue", sender: self)
+    }
+    
+    
     @IBOutlet weak var carNicknameTextField: UITextField!
     @IBOutlet weak var carMakeTextField: UITextField!
     @IBOutlet weak var carModelTextField: UITextField!
