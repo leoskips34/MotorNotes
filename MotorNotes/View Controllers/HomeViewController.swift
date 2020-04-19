@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+
     @IBAction func menuTapped(_ sender: Any) {
         
         if !menuOut {
@@ -46,7 +47,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func settingsButton(_ sender: Any) {
-        
+
         self.performSegue(withIdentifier: "settingSegue", sender: self)
     }
     
