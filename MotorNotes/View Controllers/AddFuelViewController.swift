@@ -10,6 +10,11 @@ import UIKit
 
 class AddFuelViewController: UIViewController {
 
+    
+    @IBAction func backToEditPage(_ sender: Any) {
+        self.performSegue(withIdentifier: "backToEditPageSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

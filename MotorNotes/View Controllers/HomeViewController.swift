@@ -26,6 +26,9 @@ class HomeViewController: UIViewController {
         self.performSegue(withIdentifier: "settingSegue", sender: self)
     }
     
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -10,6 +10,11 @@ import UIKit
 
 class EditCarViewController: UIViewController {
 
+    @IBAction func backHomeButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "backHomeButtonSegue", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
