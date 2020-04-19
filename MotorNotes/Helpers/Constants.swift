@@ -12,8 +12,8 @@ struct Constants {
     
     struct Storyboard {
         
-        static let homeViewController = "HomeVC"
-        static let loginViewController = "LoginVC"
+        static let homeNavigationController = "HomeNavigationVC"
+        static let loginNavigationController = "LoginNavigationVC"
     }
     
     static func authPersistence(_ authStatus: Bool) {

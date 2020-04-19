@@ -36,7 +36,7 @@ class SettingsViewController: UIViewController {
     func transitionToLogin() {
         
         // Return to login view controller
-        let loginViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.loginViewController) as? LoginViewController
+        let loginViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.loginNavigationController) as! UINavigationController
         
         view.window?.rootViewController = loginViewController
         view.window?.makeKeyAndVisible()
