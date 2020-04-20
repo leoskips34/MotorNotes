@@ -10,8 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var leadingCon: NSLayoutConstraint!
+    var menuOut = false
+    
     @IBAction func menuTapped(_ sender: Any) {
-        
+    
         if !menuOut {
             leadingCon.constant = 150
             trailingCon.constant = -150
@@ -28,11 +31,14 @@ class HomeViewController: UIViewController {
             print("The animation is complete!")
         }
         
+        
     }
-    @IBOutlet weak var leadingCon: NSLayoutConstraint!
     @IBOutlet weak var trailingCon: NSLayoutConstraint!
     
-    var menuOut = false;
+
+    
+    
+
     
     @IBAction func addCarbutton(_ sender: Any) {
         print ("Button prssed for add car")
@@ -50,9 +56,6 @@ class HomeViewController: UIViewController {
 
         self.performSegue(withIdentifier: "settingSegue", sender: self)
     }
-    
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
