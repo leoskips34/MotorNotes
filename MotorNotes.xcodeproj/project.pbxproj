@@ -12,6 +12,7 @@
 		CDAA0423244587AD0017AF8B /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA0422244587AD0017AF8B /* AddCarViewController.swift */; };
 		CDAA042524458C7F0017AF8B /* EditCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA042424458C7F0017AF8B /* EditCarViewController.swift */; };
 		D5335A7C336C9CDCB1C953DF /* Pods_MotorNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76CCFD98BB5199E4E801E50 /* Pods_MotorNotes.framework */; };
+		D936B3AB244D407C00916CDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D936B3AA244D407C00916CDC /* GoogleService-Info.plist */; };
 		D94D614D24428AD000613DE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D614C24428AD000613DE4 /* LoginViewController.swift */; };
 		D94D615224428B1600613DE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D615124428B1600613DE4 /* HomeViewController.swift */; };
 		D952D7A32442942500CE239A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D952D7A22442942500CE239A /* Utilities.swift */; };
@@ -26,7 +27,6 @@
 		D97FEB08242DB46100BFDBD5 /* MotorNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97FEB07242DB46100BFDBD5 /* MotorNotesUITests.swift */; };
 		D9899E70244A5FC0001549D2 /* AddFuelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9899E6F244A5FC0001549D2 /* AddFuelViewController.swift */; };
 		D9899E72244A5FDB001549D2 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9899E71244A5FDB001549D2 /* AddServiceViewController.swift */; };
-		D9F644012446CF970074344E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9F644002446CF970074344E /* GoogleService-Info.plist */; };
 		D9F644032448A6340074344E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F644022448A6330074344E /* SettingsViewController.swift */; };
 		E9616BF8FBE1BE888C85357A /* Pods_MotorNotes_MotorNotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8499B1DB8ED8C63A309FDD49 /* Pods_MotorNotes_MotorNotesUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +60,7 @@
 		CDAA0422244587AD0017AF8B /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 		CDAA042424458C7F0017AF8B /* EditCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCarViewController.swift; sourceTree = "<group>"; };
 		CE21C6AC7C606537DDE631E8 /* Pods_MotorNotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorNotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D936B3AA244D407C00916CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D94D614C24428AD000613DE4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D94D615124428B1600613DE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D952D7A22442942500CE239A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		D97FEB09242DB46100BFDBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9899E6F244A5FC0001549D2 /* AddFuelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFuelViewController.swift; sourceTree = "<group>"; };
 		D9899E71244A5FDB001549D2 /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
-		D9F644002446CF970074344E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9F644022448A6330074344E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DB6CBF6B4D32F632871294C9 /* Pods-MotorNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotes.debug.xcconfig"; path = "Target Support Files/Pods-MotorNotes/Pods-MotorNotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,7 +217,7 @@
 		D97FEB1D243EFD4200BFDBD5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				D9F644002446CF970074344E /* GoogleService-Info.plist */,
+				D936B3AA244D407C00916CDC /* GoogleService-Info.plist */,
 				D97FEAF3242DB46100BFDBD5 /* Info.plist */,
 			);
 			path = Settings;
@@ -343,7 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D97FEAF2242DB46100BFDBD5 /* LaunchScreen.storyboard in Resources */,
-				D9F644012446CF970074344E /* GoogleService-Info.plist in Resources */,
+				D936B3AB244D407C00916CDC /* GoogleService-Info.plist in Resources */,
 				D97FEAEF242DB46100BFDBD5 /* Assets.xcassets in Resources */,
 				D97FEAED242DB45D00BFDBD5 /* Main.storyboard in Resources */,
 			);

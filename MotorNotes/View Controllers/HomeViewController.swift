@@ -11,7 +11,13 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var leadingCon: NSLayoutConstraint!
+    @IBOutlet weak var trailingCon: NSLayoutConstraint!
     var menuOut = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
     
     @IBAction func menuTapped(_ sender: Any) {
     
@@ -28,50 +34,19 @@ class HomeViewController: UIViewController {
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
         }) { (animationComplete) in
-            print("The animation is complete!")
+            print("The hamburger menu button has been pressed")
         }
-        
-        
     }
-    @IBOutlet weak var trailingCon: NSLayoutConstraint!
-    
 
-    
-    
-
-    
     @IBAction func addCarbutton(_ sender: Any) {
-        print ("Button prssed for add car")
+        print ("Button pressed to add a car")
         
         self.performSegue(withIdentifier: "AddCarSegue", sender: self)
     }
     
     @IBAction func editCarbutton(_ sender: Any) {
-        print ("Button prssed for edit")
+        print ("Button pressed to edit a car")
                
-               self.performSegue(withIdentifier: "editCarSegue", sender: self)
+        self.performSegue(withIdentifier: "editCarSegue", sender: self)
     }
-    
-    @IBAction func settingsButton(_ sender: Any) {
-
-        self.performSegue(withIdentifier: "settingSegue", sender: self)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

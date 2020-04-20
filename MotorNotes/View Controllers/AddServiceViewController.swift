@@ -10,27 +10,46 @@ import UIKit
 
 class AddServiceViewController: UIViewController {
 
-    
-    
-    @IBAction func backButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "backToEditSegue", sender: self)
-    }
+    @IBOutlet weak var serviceRecordTitleTextField: UITextField!
+    @IBOutlet weak var serviceDateTextField: UITextField!
+    @IBOutlet weak var serviceOdometerTextField: UITextField!
+    @IBOutlet weak var serviceTypeTextField: UITextField!
+    @IBOutlet weak var serviceShopNameTextField: UITextField!
+    @IBOutlet weak var serviceShopLocationTextField: UITextField!
+    @IBOutlet weak var serviceTotalCostTextField: UITextField!
+    @IBOutlet weak var serviceNotesTextView: UITextView!
+    @IBOutlet weak var saveServiceRecordButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        viewControllerDesigns()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - View Controller design aspects
+    func viewControllerDesigns() {
+        
+        // Hide error label
+        errorLabel.alpha = 0
+        
+        // Text field and button designs
+        Utilities.styleTextField(serviceRecordTitleTextField)
+        Utilities.styleTextField(serviceDateTextField)
+        Utilities.styleTextField(serviceOdometerTextField)
+        Utilities.styleTextField(serviceTypeTextField)
+        Utilities.styleTextField(serviceShopNameTextField)
+        Utilities.styleTextField(serviceShopLocationTextField)
+        Utilities.styleTextField(serviceTotalCostTextField)
+        Utilities.styleTextView(serviceNotesTextView)
+        Utilities.styleFilledButton(saveServiceRecordButton)
     }
-    */
-
+    
+    // MARK: - Tap Gesture Recognizer
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func saveServiceRecordTapped(_ sender: Any) {
+    }
 }
