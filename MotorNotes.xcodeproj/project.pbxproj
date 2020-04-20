@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		6679E330B3EDF00A5878852E /* Pods_MotorNotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE21C6AC7C606537DDE631E8 /* Pods_MotorNotesTests.framework */; };
+
+		AD0F4196DA1922DE20679641 /* Pods_MotorNotes_MotorNotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C8881CA63C97B3C6AF3D83 /* Pods_MotorNotes_MotorNotesUITests.framework */; };
+		B3100DA9244D08980012BD67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3100DA8244D08980012BD67 /* GoogleService-Info.plist */; };
+		C71221E31D9DF4F61CF574A4 /* Pods_MotorNotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38171FAEDD84F6FC2BCE022E /* Pods_MotorNotesTests.framework */; };
+		C972F2D84EAE862D3663DEC1 /* Pods_MotorNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344151D8BE348F7A8D4149D1 /* Pods_MotorNotes.framework */; };
+
 		CDAA041F2443A7280017AF8B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA041E2443A7280017AF8B /* SignUpViewController.swift */; };
 		CDAA0423244587AD0017AF8B /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA0422244587AD0017AF8B /* AddCarViewController.swift */; };
 		CDAA042524458C7F0017AF8B /* EditCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA042424458C7F0017AF8B /* EditCarViewController.swift */; };
@@ -49,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
 		04625F9A0ABF71B7EAA32626 /* Pods-MotorNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotes.release.xcconfig"; path = "Target Support Files/Pods-MotorNotes/Pods-MotorNotes.release.xcconfig"; sourceTree = "<group>"; };
 		4D8E2EC82DE93716C4550DF2 /* Pods-MotorNotes-MotorNotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotes-MotorNotesUITests.release.xcconfig"; path = "Target Support Files/Pods-MotorNotes-MotorNotesUITests/Pods-MotorNotes-MotorNotesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8499B1DB8ED8C63A309FDD49 /* Pods_MotorNotes_MotorNotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorNotes_MotorNotesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +64,16 @@
 		8DC7C4D7AE1CB842284502F8 /* Pods-MotorNotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotesTests.debug.xcconfig"; path = "Target Support Files/Pods-MotorNotesTests/Pods-MotorNotesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A76CCFD98BB5199E4E801E50 /* Pods_MotorNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59A6E039DF042D9FF28B56E /* Pods-MotorNotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotesTests.release.xcconfig"; path = "Target Support Files/Pods-MotorNotesTests/Pods-MotorNotesTests.release.xcconfig"; sourceTree = "<group>"; };
+
+		084851ACCBE5F6F63774BA02 /* Pods-MotorNotes-MotorNotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotes-MotorNotesUITests.release.xcconfig"; path = "Target Support Files/Pods-MotorNotes-MotorNotesUITests/Pods-MotorNotes-MotorNotesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2201B55599F4D9EEE55C4A3E /* Pods-MotorNotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotesTests.debug.xcconfig"; path = "Target Support Files/Pods-MotorNotesTests/Pods-MotorNotesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		344151D8BE348F7A8D4149D1 /* Pods_MotorNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38171FAEDD84F6FC2BCE022E /* Pods_MotorNotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorNotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB76AF13AE636F5BD62D9A4 /* Pods-MotorNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotes.release.xcconfig"; path = "Target Support Files/Pods-MotorNotes/Pods-MotorNotes.release.xcconfig"; sourceTree = "<group>"; };
+		957F1BB0D3ACAE350E578EF9 /* Pods-MotorNotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotesTests.release.xcconfig"; path = "Target Support Files/Pods-MotorNotesTests/Pods-MotorNotesTests.release.xcconfig"; sourceTree = "<group>"; };
+		98C8881CA63C97B3C6AF3D83 /* Pods_MotorNotes_MotorNotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorNotes_MotorNotesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3100DA8244D08980012BD67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+
 		CDAA041E2443A7280017AF8B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CDAA0422244587AD0017AF8B /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 		CDAA042424458C7F0017AF8B /* EditCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCarViewController.swift; sourceTree = "<group>"; };
@@ -217,7 +235,11 @@
 		D97FEB1D243EFD4200BFDBD5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+
 				D936B3AA244D407C00916CDC /* GoogleService-Info.plist */,
+
+				B3100DA8244D08980012BD67 /* GoogleService-Info.plist */,
+
 				D97FEAF3242DB46100BFDBD5 /* Info.plist */,
 			);
 			path = Settings;
@@ -343,7 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D97FEAF2242DB46100BFDBD5 /* LaunchScreen.storyboard in Resources */,
+
 				D936B3AB244D407C00916CDC /* GoogleService-Info.plist in Resources */,
+
+				B3100DA9244D08980012BD67 /* GoogleService-Info.plist in Resources */,
+
 				D97FEAEF242DB46100BFDBD5 /* Assets.xcassets in Resources */,
 				D97FEAED242DB45D00BFDBD5 /* Main.storyboard in Resources */,
 			);
