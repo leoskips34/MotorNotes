@@ -193,7 +193,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCarbutton:" destination="xJl-Q7-ePU" eventType="touchUpInside" id="VFR-pu-BOQ"/>
+                                    <segue destination="9BB-3n-toH" kind="show" id="hgk-uD-Kpo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQm-vO-n4N">
@@ -215,7 +215,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="editCarbutton:" destination="xJl-Q7-ePU" eventType="touchUpInside" id="9Zx-o3-xTg"/>
+                                    <segue destination="RdW-N8-GvD" kind="show" id="knm-Eb-74N"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBr-lk-RYt">
@@ -264,8 +264,6 @@
                     <connections>
                         <outlet property="leadingCon" destination="3wl-9P-tVq" id="pP7-5W-nMo"/>
                         <outlet property="trailingCon" destination="ouC-Nr-MhQ" id="Ie4-Cu-SFp"/>
-                        <segue destination="RdW-N8-GvD" kind="show" identifier="editCarSegue" id="xJ9-kC-Okw"/>
-                        <segue destination="9BB-3n-toH" kind="show" identifier="AddCarSegue" id="XWh-aW-J2d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqQ-rz-fPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
