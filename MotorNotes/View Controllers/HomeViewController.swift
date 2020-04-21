@@ -11,7 +11,6 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var leadingCon: NSLayoutConstraint!
-
     @IBOutlet weak var trailingCon: NSLayoutConstraint!
     var menuOut = false
     
@@ -20,10 +19,6 @@ class HomeViewController: UIViewController {
 
     }
 
-
-     var menuOut = false
-
-    
     @IBAction func menuTapped(_ sender: Any) {
     
         if !menuOut {
@@ -42,29 +37,5 @@ class HomeViewController: UIViewController {
             print("The hamburger menu button has been pressed")
         }
 
-    }
-
-
-        
-        
-    }
-    @IBOutlet weak var trailingCon: NSLayoutConstraint!
-    
-
-    
-    
-
-    
-
-    @IBAction func addCarbutton(_ sender: Any) {
-        print ("Button pressed to add a car")
-        
-        self.performSegue(withIdentifier: "AddCarSegue", sender: self)
-    }
-    
-    @IBAction func editCarbutton(_ sender: Any) {
-        print ("Button pressed to edit a car")
-               
-        self.performSegue(withIdentifier: "editCarSegue", sender: self)
     }
 }
