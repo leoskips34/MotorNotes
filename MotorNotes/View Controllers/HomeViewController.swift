@@ -7,18 +7,39 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var leadingCon: NSLayoutConstraint!
     @IBOutlet weak var trailingCon: NSLayoutConstraint!
+    
     var menuOut = false
+    var db: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Firestore setup
+        db = Firestore.firestore()
+        
+        loadData()
+    }
+    
+    // MARK: - Firestore data loading
+    func loadData() {
+        db.collection("users").document(Constants.Authentication.user).collection("cars").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print(document.data())
+                }
+            }
+        }
     }
 
+    // MARK: - Hamburger Menu
     @IBAction func menuTapped(_ sender: Any) {
     
         if !menuOut {

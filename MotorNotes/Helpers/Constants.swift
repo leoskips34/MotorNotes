@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 struct Constants {
     
@@ -14,6 +15,11 @@ struct Constants {
         
         static let homeNavigationController = "HomeNavigationVC"
         static let loginNavigationController = "LoginNavigationVC"
+    }
+    
+    struct Authentication {
+        
+        static let user = Auth.auth().currentUser!.uid
     }
     
     static func authPersistence(_ authStatus: Bool) {
