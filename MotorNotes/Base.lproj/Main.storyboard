@@ -607,8 +607,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CoU-y4-mqJ">
                                         <rect key="frame" x="0.0" y="50" width="345" height="135"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-Vx-Izn">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-Vx-Izn">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="135"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="sRL-vY-vEg" appends="YES" id="uxE-gn-7nO"/>
+                                                </connections>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hgd-Ka-iRc">
                                                 <rect key="frame" x="180" y="0.0" width="165" height="135"/>
@@ -707,6 +711,7 @@
                     <navigationItem key="navigationItem" title="Add Car" id="nWJ-7n-R1X"/>
                     <connections>
                         <outlet property="carColorTextField" destination="TRh-Ip-Ixw" id="9Qk-ys-Dy8"/>
+                        <outlet property="carImageView" destination="OGy-Vx-Izn" id="DkR-39-YkG"/>
                         <outlet property="carLicensePlateTextField" destination="fF4-mU-0E1" id="lrJ-OQ-Cak"/>
                         <outlet property="carMakeTextField" destination="0KR-VB-dBF" id="Py5-1r-03c"/>
                         <outlet property="carModelTextField" destination="M7L-qf-oPV" id="GTz-Ez-5N5"/>
@@ -723,6 +728,11 @@
                 <tapGestureRecognizer id="7z6-kg-KZV">
                     <connections>
                         <action selector="onTap:" destination="9BB-3n-toH" id="etf-73-5Mb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="sRL-vY-vEg">
+                    <connections>
+                        <action selector="onCameraButton:" destination="9BB-3n-toH" id="BBH-fx-aZO"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
