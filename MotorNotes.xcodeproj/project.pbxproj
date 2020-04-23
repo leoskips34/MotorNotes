@@ -14,6 +14,7 @@
 		D5335A7C336C9CDCB1C953DF /* Pods_MotorNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76CCFD98BB5199E4E801E50 /* Pods_MotorNotes.framework */; };
 		D936B3AB244D407C00916CDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D936B3AA244D407C00916CDC /* GoogleService-Info.plist */; };
 		D936B3AF245004D800916CDC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936B3AE245004D800916CDC /* Images.swift */; };
+		D936B3B524510D0900916CDC /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936B3B424510D0900916CDC /* CarCell.swift */; };
 		D94D614D24428AD000613DE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D614C24428AD000613DE4 /* LoginViewController.swift */; };
 		D94D615224428B1600613DE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D615124428B1600613DE4 /* HomeViewController.swift */; };
 		D952D7A32442942500CE239A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D952D7A22442942500CE239A /* Utilities.swift */; };
@@ -63,6 +64,7 @@
 		CE21C6AC7C606537DDE631E8 /* Pods_MotorNotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorNotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D936B3AA244D407C00916CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D936B3AE245004D800916CDC /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		D936B3B424510D0900916CDC /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		D94D614C24428AD000613DE4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D94D615124428B1600613DE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D952D7A22442942500CE239A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 				C59A6E039DF042D9FF28B56E /* Pods-MotorNotesTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D936B3B324510C9F00916CDC /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D936B3B424510D0900916CDC /* CarCell.swift */,
+			);
+			path = "TableView Cells";
 			sourceTree = "<group>";
 		};
 		D94D615024428AEE00613DE4 /* Auth View Controllers */ = {
@@ -193,6 +203,7 @@
 				D97FEAEE242DB46100BFDBD5 /* Assets.xcassets */,
 				D97FEAF0242DB46100BFDBD5 /* LaunchScreen.storyboard */,
 				D952D7A12442940700CE239A /* Helpers */,
+				D936B3B324510C9F00916CDC /* TableView Cells */,
 				D94D615324428B2200613DE4 /* View Controllers */,
 				D97FEB1D243EFD4200BFDBD5 /* Settings */,
 			);
@@ -479,6 +490,7 @@
 				D94D614D24428AD000613DE4 /* LoginViewController.swift in Sources */,
 				D97FEAEA242DB45D00BFDBD5 /* ViewController.swift in Sources */,
 				D9F644032448A6340074344E /* SettingsViewController.swift in Sources */,
+				D936B3B524510D0900916CDC /* CarCell.swift in Sources */,
 				D9899E72244A5FDB001549D2 /* AddServiceViewController.swift in Sources */,
 				CDAA041F2443A7280017AF8B /* SignUpViewController.swift in Sources */,
 				CDAA0423244587AD0017AF8B /* AddCarViewController.swift in Sources */,

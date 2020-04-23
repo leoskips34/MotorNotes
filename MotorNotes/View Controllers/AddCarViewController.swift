@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
 
@@ -109,7 +108,7 @@ class AddCarViewController: UIViewController {
             // Add data to Firebase
             var ref: DocumentReference? = nil
             
-            ref = db.collection("users").document(Auth.auth().currentUser!.uid).collection("cars").addDocument(data: [
+            ref = db.collection("users").document(Constants.Authentication.user).collection("cars").addDocument(data: [
                 "carnickname": carNickname,
                 "make": carMake,
                 "model": carModel,
@@ -128,10 +127,6 @@ class AddCarViewController: UIViewController {
         }
     }
     
-    @IBAction func onCameraButton(_ sender: UITapGestureRecognizer) {
-        self.imagePicker.present(from: sender.view!)
-    }
-    
     // MARK: - Tap Gesture Recognizer
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
@@ -146,6 +141,11 @@ class AddCarViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    // MARK: - Camera alert
+    @IBAction func onCameraButton(_ sender: UITapGestureRecognizer) {
+        self.imagePicker.present(from: sender.view!)
     }
 }
 
