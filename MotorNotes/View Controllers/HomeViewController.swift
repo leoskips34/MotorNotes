@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var menuOut = false
     var db: Firestore!
     var carArray = [[String: String]]()
+    let carRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +30,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-        loadData()
+        carRefreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        tableView.refreshControl = carRefreshControl
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.loadData()
     }
     
     // MARK: - Firestore data loading
-    func loadData() {
+    @objc func loadData() {
+        
+        carArray.removeAll()
         
         db.collection("users").document(Constants.Authentication.user).collection("cars").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -72,6 +82,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    
+                    self.carRefreshControl.endRefreshing()
                 }
             }
         }
@@ -120,7 +132,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.carOdometerLabel.text = car["odometer"]
         cell.carRegistrationDateLabel.text = car["registrationdate"]
         
-        print("Cell passed")
         return cell
         
     }
