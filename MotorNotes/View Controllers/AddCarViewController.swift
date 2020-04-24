@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 
 class AddCarViewController: UIViewController {
     
     @IBOutlet weak var carNicknameTextField: UITextField!
+    @IBOutlet weak var carImageView: UIImageView!
     @IBOutlet weak var carMakeTextField: UITextField!
     @IBOutlet weak var carModelTextField: UITextField!
     @IBOutlet weak var carYearTextField: UITextField!
@@ -25,11 +26,14 @@ class AddCarViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     var db: Firestore!
+    var imagePicker: ImagePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewControllerDesigns()
+        
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
 
         // Initial setup
         let settings = FirestoreSettings()
@@ -104,7 +108,7 @@ class AddCarViewController: UIViewController {
             // Add data to Firebase
             var ref: DocumentReference? = nil
             
-            ref = db.collection("users").document(Auth.auth().currentUser!.uid).collection("cars").addDocument(data: [
+            ref = db.collection("users").document(Constants.Authentication.user).collection("cars").addDocument(data: [
                 "carnickname": carNickname,
                 "make": carMake,
                 "model": carModel,
@@ -137,5 +141,17 @@ class AddCarViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    // MARK: - Camera alert
+    @IBAction func onCameraButton(_ sender: UITapGestureRecognizer) {
+        self.imagePicker.present(from: sender.view!)
+    }
+}
+
+extension AddCarViewController: ImagePickerDelegate {
+    
+    func didSelect(image: UIImage?) {
+        self.carImageView.image = image
     }
 }
