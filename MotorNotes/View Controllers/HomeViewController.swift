@@ -155,7 +155,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if segue.identifier == Constants.Storyboard.viewCarSegueIdentifier {
             
-            if let destVC = segue.destination as? EditCarViewController {
+            if let destVC = segue.destination as? CarViewDetailViewController {
                 destVC.carID = carDocumentId[carSelectedRow!]
             }
         }

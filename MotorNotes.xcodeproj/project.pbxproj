@@ -10,7 +10,7 @@
 		6679E330B3EDF00A5878852E /* Pods_MotorNotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE21C6AC7C606537DDE631E8 /* Pods_MotorNotesTests.framework */; };
 		CDAA041F2443A7280017AF8B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA041E2443A7280017AF8B /* SignUpViewController.swift */; };
 		CDAA0423244587AD0017AF8B /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA0422244587AD0017AF8B /* AddCarViewController.swift */; };
-		CDAA042524458C7F0017AF8B /* EditCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA042424458C7F0017AF8B /* EditCarViewController.swift */; };
+		CDAA042524458C7F0017AF8B /* CarViewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA042424458C7F0017AF8B /* CarViewDetailViewController.swift */; };
 		D5335A7C336C9CDCB1C953DF /* Pods_MotorNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76CCFD98BB5199E4E801E50 /* Pods_MotorNotes.framework */; };
 		D936B3AB244D407C00916CDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D936B3AA244D407C00916CDC /* GoogleService-Info.plist */; };
 		D936B3AF245004D800916CDC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936B3AE245004D800916CDC /* Images.swift */; };
@@ -60,7 +60,7 @@
 		C59A6E039DF042D9FF28B56E /* Pods-MotorNotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotesTests.release.xcconfig"; path = "Target Support Files/Pods-MotorNotesTests/Pods-MotorNotesTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDAA041E2443A7280017AF8B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CDAA0422244587AD0017AF8B /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
-		CDAA042424458C7F0017AF8B /* EditCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCarViewController.swift; sourceTree = "<group>"; };
+		CDAA042424458C7F0017AF8B /* CarViewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewDetailViewController.swift; sourceTree = "<group>"; };
 		CE21C6AC7C606537DDE631E8 /* Pods_MotorNotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorNotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D936B3AA244D407C00916CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D936B3AE245004D800916CDC /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		D94D615324428B2200613DE4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CDAA042424458C7F0017AF8B /* EditCarViewController.swift */,
+				CDAA042424458C7F0017AF8B /* CarViewDetailViewController.swift */,
 				D94D615124428B1600613DE4 /* HomeViewController.swift */,
 				CDAA0422244587AD0017AF8B /* AddCarViewController.swift */,
 				D9F644022448A6330074344E /* SettingsViewController.swift */,
@@ -501,7 +501,7 @@
 				D97FEAE8242DB45D00BFDBD5 /* SceneDelegate.swift in Sources */,
 				D94D615224428B1600613DE4 /* HomeViewController.swift in Sources */,
 				D952D7A52442BD8300CE239A /* Constants.swift in Sources */,
-				CDAA042524458C7F0017AF8B /* EditCarViewController.swift in Sources */,
+				CDAA042524458C7F0017AF8B /* CarViewDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
