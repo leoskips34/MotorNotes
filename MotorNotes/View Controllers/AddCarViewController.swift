@@ -39,7 +39,7 @@ class AddCarViewController: UIViewController {
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         
-        // End setup
+        // Firestore db setup
         db = Firestore.firestore()
     }
     
@@ -128,6 +128,8 @@ class AddCarViewController: UIViewController {
     }
     
     // MARK: - Tap Gesture Recognizer
+    
+    // Tap anywhere on the screen to dismiss keyboard
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
     }

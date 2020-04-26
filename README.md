@@ -27,11 +27,11 @@ Keep track of all your car related needs, from keeping track of mileage to track
 
 **Required Must-have Stories**
 
-- [] User sees app icon in home screen and styled launch screen
-- [x] User can log in and log out
-- [x] User stays logged in across restarts.
-- [] User can create a vehicle.
-- [] User can record information about their vehicle.
+[x] User sees app icon in home screen and styled launch screen
+[x] User can log in and log out
+[x] User stays logged in across restarts.
+[x] User can create a vehicle.
+[x] User can record information about their vehicle.
 - [] User can create service records for their vehicle.
 - [] User can create fuel records for their vehicle.
 - [] User can access information related to their vehicle.

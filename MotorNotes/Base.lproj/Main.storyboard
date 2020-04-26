@@ -185,17 +185,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sme-2f-lbU">
-                                <rect key="frame" x="0.0" y="101" width="115" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Add a Car">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9BB-3n-toH" kind="show" id="hgk-uD-Kpo"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQm-vO-n4N">
                                 <rect key="frame" x="0.0" y="304" width="115" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -205,17 +194,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="EaU-zt-eB3" kind="show" id="lAB-86-oTu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSs-IR-kN4">
-                                <rect key="frame" x="0.0" y="170" width="115" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Edit Car">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="RdW-N8-GvD" kind="show" id="knm-Eb-74N"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBr-lk-RYt">
@@ -313,47 +291,237 @@
                                 <action selector="menuTapped:" destination="xJl-Q7-ePU" id="KDD-3h-mDW"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add Car" id="R7o-ug-7Dr">
+                            <connections>
+                                <segue destination="9BB-3n-toH" kind="show" id="9YD-xG-vO9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="leadingCon" destination="3wl-9P-tVq" id="pP7-5W-nMo"/>
                         <outlet property="tableView" destination="4OO-yR-bV6" id="vkq-ck-OUM"/>
                         <outlet property="trailingCon" destination="ouC-Nr-MhQ" id="Ie4-Cu-SFp"/>
+                        <segue destination="RdW-N8-GvD" kind="show" identifier="ViewCarSegue" id="E4O-2j-er1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqQ-rz-fPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3202.898550724638" y="124.55357142857142"/>
         </scene>
-        <!--Edit Car-->
+        <!--View Car-->
         <scene sceneID="QwN-np-Naf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="RdW-N8-GvD" customClass="EditCarViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="RdW-N8-GvD" customClass="CarViewDetailViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cLY-4q-uLO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO4-iy-gQj">
-                                <rect key="frame" x="223" y="580" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Service"/>
-                                <connections>
-                                    <segue destination="UhJ-gh-zbR" kind="show" id="p7t-mY-jYo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOO-76-EHx">
-                                <rect key="frame" x="29" y="580" width="61" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Fuel"/>
-                                <connections>
-                                    <segue destination="1tV-d6-qfD" kind="show" id="TmL-Om-Qzm"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fqt-8W-7qs">
+                                <rect key="frame" x="0.0" y="44" width="375" height="448"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-sf-rER">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="uyc-MM-d7R"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHW-Yr-0I6">
+                                        <rect key="frame" x="0.0" y="22.5" width="375" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="cJZ-4T-Hcw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aKm-my-3kO">
+                                        <rect key="frame" x="0.0" y="50.5" width="375" height="145.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FlV-bR-YDi">
+                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="145.5"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Tim-3h-pls">
+                                                <rect key="frame" x="192.5" y="0.0" width="182.5" height="145.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIj-Fn-Kr6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-dw-FP0">
+                                                        <rect key="frame" x="0.0" y="35" width="182.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDD-au-spa">
+                                                        <rect key="frame" x="0.0" y="60.5" width="182.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJQ-cJ-x9d">
+                                                        <rect key="frame" x="0.0" y="80" width="182.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORO-Ry-1PL">
+                                                        <rect key="frame" x="0.0" y="105.5" width="182.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8e-E9-npH">
+                                                        <rect key="frame" x="0.0" y="125" width="182.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odometer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-cN-rXX">
+                                        <rect key="frame" x="0.0" y="203.5" width="375" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kil-pi-a65">
+                                        <rect key="frame" x="0.0" y="226" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License Plate #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lax-Yf-zpU">
+                                        <rect key="frame" x="0.0" y="254" width="375" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96b-xO-aBw">
+                                        <rect key="frame" x="0.0" y="276.5" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIN #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xk-tW-Ewa">
+                                        <rect key="frame" x="0.0" y="304.5" width="375" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-Tf-sJf">
+                                        <rect key="frame" x="0.0" y="326.5" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgK-hA-DWe">
+                                        <rect key="frame" x="0.0" y="355" width="375" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPS-La-dj8">
+                                        <rect key="frame" x="0.0" y="377" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ7-78-E8l">
+                                        <rect key="frame" x="0.0" y="405.5" width="375" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl6-29-gMu">
+                                        <rect key="frame" x="0.0" y="427.5" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ITY-cc-0aM">
+                                <rect key="frame" x="0.0" y="512" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-GB-Fkp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <state key="normal" title="See Service Records"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-Yy-wbo">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="30"/>
+                                        <state key="normal" title="See Fuel Records"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CMx-Wh-WpF"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qUg-T6-ZU5">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO4-iy-gQj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <state key="normal" title="Add Service"/>
+                                        <connections>
+                                            <segue destination="UhJ-gh-zbR" kind="show" id="p7t-mY-jYo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOO-76-EHx">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="30"/>
+                                        <state key="normal" title="Add Fuel"/>
+                                        <connections>
+                                            <segue destination="1tV-d6-qfD" kind="show" id="TmL-Om-Qzm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="jfI-go-I9p"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qUg-T6-ZU5" firstAttribute="top" secondItem="ITY-cc-0aM" secondAttribute="bottom" constant="15" id="4dI-mC-4zG"/>
+                            <constraint firstItem="Fqt-8W-7qs" firstAttribute="top" secondItem="Z51-j7-ROq" secondAttribute="top" id="6cP-Yj-wdU"/>
+                            <constraint firstItem="Z51-j7-ROq" firstAttribute="trailing" secondItem="qUg-T6-ZU5" secondAttribute="trailing" id="Dsm-VK-MvS"/>
+                            <constraint firstItem="ITY-cc-0aM" firstAttribute="top" secondItem="Fqt-8W-7qs" secondAttribute="bottom" constant="20" id="GXy-9Y-ORh"/>
+                            <constraint firstItem="qUg-T6-ZU5" firstAttribute="leading" secondItem="Z51-j7-ROq" secondAttribute="leading" id="KLs-PM-qwu"/>
+                            <constraint firstItem="Fqt-8W-7qs" firstAttribute="leading" secondItem="Z51-j7-ROq" secondAttribute="leading" id="Wwg-N0-a5V"/>
+                            <constraint firstItem="ITY-cc-0aM" firstAttribute="leading" secondItem="Z51-j7-ROq" secondAttribute="leading" id="e5z-qr-xc8"/>
+                            <constraint firstItem="qUg-T6-ZU5" firstAttribute="bottom" secondItem="Z51-j7-ROq" secondAttribute="bottom" id="gRe-j3-qBf"/>
+                            <constraint firstItem="Z51-j7-ROq" firstAttribute="trailing" secondItem="ITY-cc-0aM" secondAttribute="trailing" id="hcB-Gr-O5L"/>
+                            <constraint firstItem="Fqt-8W-7qs" firstAttribute="trailing" secondItem="Z51-j7-ROq" secondAttribute="trailing" id="i1i-H5-ZfW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Z51-j7-ROq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Car" id="8j4-CA-lax"/>
+                    <navigationItem key="navigationItem" title="View Car" id="8j4-CA-lax">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="7AI-Ku-YNn"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addFuelButton" destination="DOO-76-EHx" id="i41-TO-EbD"/>
+                        <outlet property="addServiceButton" destination="OO4-iy-gQj" id="myW-W1-ec2"/>
+                        <outlet property="carColorLabel" destination="Pl6-29-gMu" id="qce-Of-AAO"/>
+                        <outlet property="carImage" destination="FlV-bR-YDi" id="Cgf-Mt-3BZ"/>
+                        <outlet property="carLicensePlateLabel" destination="96b-xO-aBw" id="oB5-OM-sAn"/>
+                        <outlet property="carMakeLabel" destination="Cr6-dw-FP0" id="Z2S-Gv-Zym"/>
+                        <outlet property="carModelLabel" destination="NJQ-cJ-x9d" id="wqT-TY-o3G"/>
+                        <outlet property="carNicknameLabel" destination="cHW-Yr-0I6" id="iK9-JI-La7"/>
+                        <outlet property="carOdometerLabel" destination="Kil-pi-a65" id="ZRE-Qx-eG2"/>
+                        <outlet property="carRegistrationDateLabel" destination="yPS-La-dj8" id="e8W-hi-pYt"/>
+                        <outlet property="carVinLabel" destination="uXK-Tf-sJf" id="2qW-l1-fra"/>
+                        <outlet property="carYearLabel" destination="R8e-E9-npH" id="T4v-OT-DfX"/>
+                        <outlet property="seeFuelRecordsButton" destination="QpT-Yy-wbo" id="Wcd-2q-Zje"/>
+                        <outlet property="seeServiceRecordsButton" destination="bNX-GB-Fkp" id="41u-8N-3nN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tk-wY-Zon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -499,7 +667,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6073" y="-350"/>
+            <point key="canvasLocation" x="6038" y="586"/>
         </scene>
         <!--Add Service Record-->
         <scene sceneID="dk6-XK-Bbr">
@@ -641,7 +809,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6074" y="497"/>
+            <point key="canvasLocation" x="6038" y="-251"/>
         </scene>
         <!--Add car-->
         <scene sceneID="rZB-pp-6uO">

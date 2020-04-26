@@ -18,6 +18,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var menuOut = false
     var db: Firestore!
     var carArray = [[String: String]]()
+    var carDocumentId = [String]()
+    var carSelectedRow: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +30,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // TableView stuff
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        loadData()
+        self.loadData()
+        
+        self.putInHamburgerMenu()
     }
     
     // MARK: - Firestore data loading
-    func loadData() {
+    @objc func loadData() {
+        
+        carArray.removeAll()
         
         db.collection("users").document(Constants.Authentication.user).collection("cars").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -67,6 +77,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     ]
                     
                     self.carArray.append(newCar)
+                    self.carDocumentId.append(document.documentID)
+                    print("Document ID: \(document.documentID) for car \(carNickname)")
                     print(self.carArray)
                 }
                 
@@ -81,13 +93,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func menuTapped(_ sender: Any) {
     
         if !menuOut {
-            leadingCon.constant = 150
-            trailingCon.constant = -150
-            menuOut = true
+            pullOutHamburgerMenu()
         } else {
-            leadingCon.constant = 0
-            trailingCon.constant = 0
-            menuOut = false
+            putInHamburgerMenu()
         }
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
@@ -95,9 +103,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }) { (animationComplete) in
             print("The hamburger menu button has been pressed")
         }
-
     }
     
+    func pullOutHamburgerMenu() {
+        leadingCon.constant = 150
+        trailingCon.constant = -150
+        menuOut = true
+    }
+    
+    func putInHamburgerMenu() {
+        leadingCon.constant = 0
+        trailingCon.constant = 0
+        menuOut = false
+    }
+    
+    // MARK: - TableView functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return carArray.count
     }
@@ -120,8 +140,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.carOdometerLabel.text = car["odometer"]
         cell.carRegistrationDateLabel.text = car["registrationdate"]
         
-        print("Cell passed")
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        carSelectedRow = indexPath.row
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        performSegue(withIdentifier: Constants.Storyboard.viewCarSegueIdentifier, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if segue.identifier == Constants.Storyboard.viewCarSegueIdentifier {
+            
+            if let destVC = segue.destination as? CarViewDetailViewController {
+                destVC.carID = carDocumentId[carSelectedRow!]
+            }
+        }
     }
 }
