@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class AddServiceViewController: UIViewController {
 
     @IBOutlet weak var serviceRecordTitleTextField: UITextField!
+    @IBOutlet weak var serviceImageView: UIImageView!
     @IBOutlet weak var serviceDateTextField: UITextField!
     @IBOutlet weak var serviceOdometerTextField: UITextField!
     @IBOutlet weak var serviceTypeTextField: UITextField!
@@ -21,8 +23,13 @@ class AddServiceViewController: UIViewController {
     @IBOutlet weak var saveServiceRecordButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    var carID: String = "" // Selected car from HomeVC
+    var db: Firestore!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Car ID is: \(carID)")
         
         viewControllerDesigns()
     }

@@ -16,6 +16,14 @@ struct Constants {
         static let homeNavigationController = "HomeNavigationVC"
         static let loginNavigationController = "LoginNavigationVC"
         static let viewCarSegueIdentifier = "ViewCarSegue"
+        
+        static let addServiceRecordSegueIdentifier = "AddServiceRecordSegue"
+        static let serviceRecordsListSegueIdentifier = "ListServiceRecordsSegue"
+        static let serviceRecordDetailSegueIdentifier = "ViewServiceRecordSegue"
+        static let addFuelRecordSegueIdentifier = "AddFuelRecordSegue"
+        static let fuelRecordsListSegueIdentifier = "ListFuelRecordsSegue"
+        static let fuelRecordDetailSegueIdentifier = "ViewFuelRecordSegue"
+        
     }
     
     struct Authentication {

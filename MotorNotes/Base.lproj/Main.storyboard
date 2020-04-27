@@ -455,10 +455,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-GB-Fkp">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                         <state key="normal" title="See Service Records"/>
+                                        <connections>
+                                            <segue destination="fVz-Gp-h9U" kind="show" identifier="ListServiceRecordsSegue" id="i2c-6Q-8uA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-Yy-wbo">
                                         <rect key="frame" x="0.0" y="40" width="375" height="30"/>
                                         <state key="normal" title="See Fuel Records"/>
+                                        <connections>
+                                            <segue destination="zQL-6a-525" kind="show" identifier="ListFuelRecordsSegue" id="qVE-NE-4dc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -472,14 +478,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                         <state key="normal" title="Add Service"/>
                                         <connections>
-                                            <segue destination="UhJ-gh-zbR" kind="show" id="p7t-mY-jYo"/>
+                                            <action selector="addServiceRecordTapped:" destination="RdW-N8-GvD" eventType="touchUpInside" id="dg1-Ta-J8P"/>
+                                            <segue destination="UhJ-gh-zbR" kind="show" identifier="AddServiceRecordSegue" id="p7t-mY-jYo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOO-76-EHx">
                                         <rect key="frame" x="0.0" y="40" width="375" height="30"/>
                                         <state key="normal" title="Add Fuel"/>
                                         <connections>
-                                            <segue destination="1tV-d6-qfD" kind="show" id="TmL-Om-Qzm"/>
+                                            <segue destination="1tV-d6-qfD" kind="show" identifier="AddFuelRecordSegue" id="TmL-Om-Qzm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -525,7 +532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tk-wY-Zon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5002" y="125"/>
+            <point key="canvasLocation" x="5018" y="125"/>
         </scene>
         <!--Add Fuel Record-->
         <scene sceneID="dLf-dm-2Uf">
@@ -651,6 +658,7 @@
                         <outlet property="errorLabel" destination="av1-ay-e2w" id="JY5-nv-wci"/>
                         <outlet property="fuelDateEnteredTextField" destination="07k-4O-P68" id="IAO-h5-gcX"/>
                         <outlet property="fuelGallonsFilledTextField" destination="nEj-9A-YqG" id="vSv-8U-8Jf"/>
+                        <outlet property="fuelImageView" destination="cr8-6E-Uhb" id="PFa-Ba-Kq9"/>
                         <outlet property="fuelOdometerTextField" destination="fEu-iU-Z3k" id="45A-O1-7Iz"/>
                         <outlet property="fuelPricePerGallonTextField" destination="vns-H3-l9Z" id="fJE-pc-yI3"/>
                         <outlet property="fuelRecordTitleTextField" destination="9pC-AC-BPk" id="APZ-5t-CBO"/>
@@ -667,7 +675,48 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6038" y="586"/>
+            <point key="canvasLocation" x="7966" y="1396"/>
+        </scene>
+        <!--Fuel View Detail View Controller-->
+        <scene sceneID="bEY-ip-43I">
+            <objects>
+                <viewController id="0hI-gU-8tr" customClass="FuelViewDetailViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e9D-zK-jpS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eUy-Kd-REi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mTO-AG-jf5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LtZ-fB-x5V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7966" y="503"/>
+        </scene>
+        <!--List of Fuel Records-->
+        <scene sceneID="vSX-lB-Rh3">
+            <objects>
+                <viewController id="zQL-6a-525" customClass="FuelListViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ehv-zl-oTd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Dyy-8M-dza"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="List of Fuel Records" id="B4w-Gv-zxk">
+                        <barButtonItem key="rightBarButtonItem" title="Add Fuel" id="JPp-t2-EVC">
+                            <connections>
+                                <segue destination="1tV-d6-qfD" kind="show" id="3k6-ya-pwz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="0hI-gU-8tr" kind="show" identifier="ViewFuelRecordSegue" id="DIA-XK-R9K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4V-Qk-4zb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6310" y="1149"/>
         </scene>
         <!--Add Service Record-->
         <scene sceneID="dk6-XK-Bbr">
@@ -793,6 +842,7 @@
                         <outlet property="errorLabel" destination="tJq-6i-yF7" id="b98-SB-laD"/>
                         <outlet property="saveServiceRecordButton" destination="ahz-Wa-HVk" id="NmH-vF-FpS"/>
                         <outlet property="serviceDateTextField" destination="Afi-pC-qhR" id="vs4-Ve-vuh"/>
+                        <outlet property="serviceImageView" destination="Epa-uc-QpR" id="cJm-MU-Ffr"/>
                         <outlet property="serviceNotesTextView" destination="gAk-Ih-aB7" id="KF6-u3-xvl"/>
                         <outlet property="serviceOdometerTextField" destination="B4E-lG-6Jz" id="GnR-40-Y6G"/>
                         <outlet property="serviceRecordTitleTextField" destination="ixb-UM-JjG" id="hmq-R6-Bha"/>
@@ -809,7 +859,48 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6038" y="-251"/>
+            <point key="canvasLocation" x="7966" y="-262"/>
+        </scene>
+        <!--Service View Detail View Controller-->
+        <scene sceneID="nh8-NG-AtQ">
+            <objects>
+                <viewController id="Z4Z-lk-prH" customClass="ServiceViewDetailViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F44-ZU-DG5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hEm-9N-2Qu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lh6-eN-YXY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeZ-ns-iNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7966" y="-1125"/>
+        </scene>
+        <!--List of Service Records-->
+        <scene sceneID="Jyj-k0-58y">
+            <objects>
+                <viewController id="fVz-Gp-h9U" customClass="ServiceListViewController" customModule="MotorNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ji3-wM-mtp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xOy-xZ-hUd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="List of Service Records" id="w4N-sL-pj1">
+                        <barButtonItem key="rightBarButtonItem" title="Add Service" id="iae-Op-htp">
+                            <connections>
+                                <segue destination="UhJ-gh-zbR" kind="show" id="BaJ-Gk-wVe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Z4Z-lk-prH" kind="show" identifier="ViewServiceRecordSegue" id="BXY-pq-EHB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJg-fQ-sNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6310" y="-486"/>
         </scene>
         <!--Add car-->
         <scene sceneID="rZB-pp-6uO">
@@ -1027,6 +1118,10 @@
             <point key="canvasLocation" x="2264.8000000000002" y="124.58770614692655"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="p7t-mY-jYo"/>
+        <segue reference="TmL-Om-Qzm"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-menu-50" width="50" height="50"/>
     </resources>

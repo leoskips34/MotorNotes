@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class AddFuelViewController: UIViewController {
 
     @IBOutlet weak var fuelRecordTitleTextField: UITextField!
+    @IBOutlet weak var fuelImageView: UIImageView!
     @IBOutlet weak var fuelDateEnteredTextField: UITextField!
     @IBOutlet weak var fuelOdometerTextField: UITextField!
     @IBOutlet weak var fuelGallonsFilledTextField: UITextField!
@@ -20,6 +22,9 @@ class AddFuelViewController: UIViewController {
     @IBOutlet weak var notesTextView: UITextView!
     @IBOutlet weak var saveFuelRecordButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    
+    var carID: String = ""
+    var db: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
