@@ -39,7 +39,7 @@ class AddCarViewController: UIViewController {
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         
-        // End setup
+        // Firestore db setup
         db = Firestore.firestore()
     }
     
@@ -117,7 +117,8 @@ class AddCarViewController: UIViewController {
                 "licenseplatenumber": carLicensePlate,
                 "vinnumber": carVIN,
                 "registrationdate": carRegistration,
-                "carcolor": carColor,], completion: { (err) in
+                "carcolor": carColor,
+                ], completion: { (err) in
                     if err != nil {
                         Utilities.showError(self.errorLabel, message: err!.localizedDescription)
                     } else {
@@ -128,11 +129,14 @@ class AddCarViewController: UIViewController {
     }
     
     // MARK: - Tap Gesture Recognizer
+    
+    // Tap anywhere on the screen to dismiss keyboard
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
     }
     
     @IBAction func saveVehicleTapped(_ sender: Any) {
+        
         createVehicle()
         
         let error = validateVehicleFields()
