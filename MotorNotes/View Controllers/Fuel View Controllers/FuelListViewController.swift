@@ -17,6 +17,8 @@ class FuelListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("[FuelListViewController] - Car ID is: \(carID)")
+
         // Do any additional setup after loading the view.
     }
     

@@ -117,7 +117,8 @@ class AddCarViewController: UIViewController {
                 "licenseplatenumber": carLicensePlate,
                 "vinnumber": carVIN,
                 "registrationdate": carRegistration,
-                "carcolor": carColor,], completion: { (err) in
+                "carcolor": carColor,
+                ], completion: { (err) in
                     if err != nil {
                         Utilities.showError(self.errorLabel, message: err!.localizedDescription)
                     } else {
@@ -135,6 +136,7 @@ class AddCarViewController: UIViewController {
     }
     
     @IBAction func saveVehicleTapped(_ sender: Any) {
+        
         createVehicle()
         
         let error = validateVehicleFields()

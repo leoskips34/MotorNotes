@@ -14,6 +14,8 @@ class ServiceListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("[ServiceListViewController] - Car ID is: \(carID)")
 
         // Do any additional setup after loading the view.
     }

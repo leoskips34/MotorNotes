@@ -456,14 +456,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                         <state key="normal" title="See Service Records"/>
                                         <connections>
-                                            <segue destination="fVz-Gp-h9U" kind="show" identifier="ListServiceRecordsSegue" id="i2c-6Q-8uA"/>
+                                            <action selector="seeServiceRecordsTapped:" destination="RdW-N8-GvD" eventType="touchUpInside" id="d4z-lk-xew"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-Yy-wbo">
                                         <rect key="frame" x="0.0" y="40" width="375" height="30"/>
                                         <state key="normal" title="See Fuel Records"/>
                                         <connections>
-                                            <segue destination="zQL-6a-525" kind="show" identifier="ListFuelRecordsSegue" id="qVE-NE-4dc"/>
+                                            <action selector="seeFuelRecordsTapped:" destination="RdW-N8-GvD" eventType="touchUpInside" id="dbd-C2-QFT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -479,14 +479,13 @@
                                         <state key="normal" title="Add Service"/>
                                         <connections>
                                             <action selector="addServiceRecordTapped:" destination="RdW-N8-GvD" eventType="touchUpInside" id="dg1-Ta-J8P"/>
-                                            <segue destination="UhJ-gh-zbR" kind="show" identifier="AddServiceRecordSegue" id="p7t-mY-jYo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOO-76-EHx">
                                         <rect key="frame" x="0.0" y="40" width="375" height="30"/>
                                         <state key="normal" title="Add Fuel"/>
                                         <connections>
-                                            <segue destination="1tV-d6-qfD" kind="show" identifier="AddFuelRecordSegue" id="TmL-Om-Qzm"/>
+                                            <action selector="addFuelRecordTapped:" destination="RdW-N8-GvD" eventType="touchUpInside" id="X40-k6-2kh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -528,6 +527,10 @@
                         <outlet property="carYearLabel" destination="R8e-E9-npH" id="T4v-OT-DfX"/>
                         <outlet property="seeFuelRecordsButton" destination="QpT-Yy-wbo" id="Wcd-2q-Zje"/>
                         <outlet property="seeServiceRecordsButton" destination="bNX-GB-Fkp" id="41u-8N-3nN"/>
+                        <segue destination="UhJ-gh-zbR" kind="show" identifier="AddServiceRecordSegue" id="8t1-yv-RF4"/>
+                        <segue destination="fVz-Gp-h9U" kind="show" identifier="ListServiceRecordsSegue" id="TvY-iB-8N9"/>
+                        <segue destination="zQL-6a-525" kind="show" identifier="ListFuelRecordsSegue" id="V0j-et-Ktu"/>
+                        <segue destination="1tV-d6-qfD" kind="show" identifier="AddFuelRecordSegue" id="wWu-7k-9Xx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tk-wY-Zon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -556,8 +559,12 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-mZ-YMx">
                                         <rect key="frame" x="0.0" y="50" width="345" height="135"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cr8-6E-Uhb">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cr8-6E-Uhb">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="135"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="7UM-hN-1Dc" appends="YES" id="0bg-Ys-78I"/>
+                                                </connections>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Byu-jx-ZJG">
                                                 <rect key="frame" x="180" y="0.0" width="165" height="135"/>
@@ -674,6 +681,11 @@
                         <action selector="onTap:" destination="1tV-d6-qfD" id="XPT-NY-PBm"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="7UM-hN-1Dc">
+                    <connections>
+                        <action selector="onCameraButton:" destination="1tV-d6-qfD" id="bO4-zc-aev"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7966" y="1396"/>
         </scene>
@@ -740,8 +752,12 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hrn-S1-yZP">
                                         <rect key="frame" x="0.0" y="50" width="345" height="135"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Epa-uc-QpR">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Epa-uc-QpR">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="135"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="yOf-gD-Pn2" appends="YES" id="FEh-k5-mQ7"/>
+                                                </connections>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bpc-aD-H1B">
                                                 <rect key="frame" x="180" y="0.0" width="165" height="135"/>
@@ -856,6 +872,11 @@
                 <tapGestureRecognizer id="RWT-FT-lrY">
                     <connections>
                         <action selector="onTap:" destination="UhJ-gh-zbR" id="LAh-1b-Ty9"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yOf-gD-Pn2">
+                    <connections>
+                        <action selector="onCameraButton:" destination="UhJ-gh-zbR" id="eXb-jn-o5p"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1119,8 +1140,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="p7t-mY-jYo"/>
-        <segue reference="TmL-Om-Qzm"/>
+        <segue reference="BaJ-Gk-wVe"/>
+        <segue reference="wWu-7k-9Xx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-menu-50" width="50" height="50"/>

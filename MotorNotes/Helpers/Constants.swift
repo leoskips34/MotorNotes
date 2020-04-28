@@ -13,10 +13,12 @@ struct Constants {
     
     struct Storyboard {
         
+        // View Controllers
         static let homeNavigationController = "HomeNavigationVC"
         static let loginNavigationController = "LoginNavigationVC"
         static let viewCarSegueIdentifier = "ViewCarSegue"
-        
+    
+        // Segue Identifiers
         static let addServiceRecordSegueIdentifier = "AddServiceRecordSegue"
         static let serviceRecordsListSegueIdentifier = "ListServiceRecordsSegue"
         static let serviceRecordDetailSegueIdentifier = "ViewServiceRecordSegue"
@@ -28,10 +30,12 @@ struct Constants {
     
     struct Authentication {
         
+        // Current logged in user's ID
         static let user = Auth.auth().currentUser!.uid
     }
     
     static func authPersistence(_ authStatus: Bool) {
+        
         let userDefaults = UserDefaults.standard
         userDefaults.set(authStatus, forKey: "usersignedin")
         userDefaults.synchronize()

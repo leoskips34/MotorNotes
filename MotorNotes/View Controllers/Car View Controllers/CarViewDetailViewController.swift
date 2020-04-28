@@ -95,6 +95,8 @@ class CarViewDetailViewController: UIViewController {
         }
     }
     
+    // MARK: - Segue Transitioners
+    
     // Transition to Add Service/Fuel VC and Service/Fuel List VC, passing the carID
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -124,9 +126,23 @@ class CarViewDetailViewController: UIViewController {
         }
     }
     
-    // Add Service Record works, but duplicates ViewController for some reason
-    // TODO: Fix duplication
+    // MARK: - Add Records Segue Transition
     @IBAction func addServiceRecordTapped(_ sender: Any) {
         performSegue(withIdentifier: Constants.Storyboard.addServiceRecordSegueIdentifier, sender: self)
     }
+    
+    @IBAction func addFuelRecordTapped(_ sender: Any) {
+        performSegue(withIdentifier: Constants.Storyboard.addFuelRecordSegueIdentifier, sender: self)
+    }
+    
+    // MARK: - See Records List Segue Transition
+    @IBAction func seeServiceRecordsTapped(_ sender: Any) {
+        performSegue(withIdentifier: Constants.Storyboard.serviceRecordsListSegueIdentifier, sender: self)
+    }
+    
+    @IBAction func seeFuelRecordsTapped(_ sender: Any) {
+        performSegue(withIdentifier: Constants.Storyboard.fuelRecordsListSegueIdentifier, sender: self)
+    }
+    
+    
 }
