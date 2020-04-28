@@ -11,7 +11,7 @@ import Firebase
 
 class CarViewDetailViewController: UIViewController {
     
-    // Car information
+    // Car information labels
     @IBOutlet weak var carNicknameLabel: UILabel!
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var carMakeLabel: UILabel!
@@ -95,5 +95,54 @@ class CarViewDetailViewController: UIViewController {
         }
     }
     
-    // TODO: Function to transition to AddFuelVC and AddServiceVC, passing the carID
+    // MARK: - Segue Transitioners
+    
+    // Transition to Add Service/Fuel VC and Service/Fuel List VC, passing the carID
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Add Service Record VC
+        if segue.identifier == Constants.Storyboard.addServiceRecordSegueIdentifier {
+            if let destVC = segue.destination as? AddServiceViewController {
+                destVC.carID = self.carID
+            }
+            
+            // Service Record List VC
+        } else if segue.identifier == Constants.Storyboard.serviceRecordsListSegueIdentifier {
+            if let destVC = segue.destination as? ServiceListViewController {
+                destVC.carID = self.carID
+            }
+            
+            // Add Fuel Record VC
+        } else if segue.identifier == Constants.Storyboard.addFuelRecordSegueIdentifier {
+            if let destVC = segue.destination as? AddFuelViewController {
+                destVC.carID = self.carID
+            }
+            
+            // Fuel Record List VC
+        } else if segue.identifier == Constants.Storyboard.fuelRecordsListSegueIdentifier {
+            if let destVC = segue.destination as? FuelListViewController {
+                destVC.carID = self.carID
+            }
+        }
+    }
+    
+    // MARK: - Add Records Segue Transition
+    @IBAction func addServiceRecordTapped(_ sender: Any) {
+        performSegue(withIdentifier: Constants.Storyboard.addServiceRecordSegueIdentifier, sender: self)
+    }
+    
+    @IBAction func addFuelRecordTapped(_ sender: Any) {
+        performSegue(withIdentifier: Constants.Storyboard.addFuelRecordSegueIdentifier, sender: self)
+    }
+    
+    // MARK: - See Records List Segue Transition
+    @IBAction func seeServiceRecordsTapped(_ sender: Any) {
+        performSegue(withIdentifier: Constants.Storyboard.serviceRecordsListSegueIdentifier, sender: self)
+    }
+    
+    @IBAction func seeFuelRecordsTapped(_ sender: Any) {
+        performSegue(withIdentifier: Constants.Storyboard.fuelRecordsListSegueIdentifier, sender: self)
+    }
+    
+    
 }

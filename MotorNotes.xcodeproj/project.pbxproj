@@ -29,6 +29,10 @@
 		D97FEB08242DB46100BFDBD5 /* MotorNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97FEB07242DB46100BFDBD5 /* MotorNotesUITests.swift */; };
 		D9899E70244A5FC0001549D2 /* AddFuelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9899E6F244A5FC0001549D2 /* AddFuelViewController.swift */; };
 		D9899E72244A5FDB001549D2 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9899E71244A5FDB001549D2 /* AddServiceViewController.swift */; };
+		D991806B2457536B007981E8 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D991806A2457536B007981E8 /* ServiceListViewController.swift */; };
+		D991806D2457537E007981E8 /* ServiceViewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D991806C2457537E007981E8 /* ServiceViewDetailViewController.swift */; };
+		D991806F2457538B007981E8 /* FuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D991806E2457538B007981E8 /* FuelListViewController.swift */; };
+		D9918071245753A0007981E8 /* FuelViewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9918070245753A0007981E8 /* FuelViewDetailViewController.swift */; };
 		D9F644032448A6340074344E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F644022448A6330074344E /* SettingsViewController.swift */; };
 		E9616BF8FBE1BE888C85357A /* Pods_MotorNotes_MotorNotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8499B1DB8ED8C63A309FDD49 /* Pods_MotorNotes_MotorNotesUITests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +89,10 @@
 		D97FEB09242DB46100BFDBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9899E6F244A5FC0001549D2 /* AddFuelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFuelViewController.swift; sourceTree = "<group>"; };
 		D9899E71244A5FDB001549D2 /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
+		D991806A2457536B007981E8 /* ServiceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
+		D991806C2457537E007981E8 /* ServiceViewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewDetailViewController.swift; sourceTree = "<group>"; };
+		D991806E2457538B007981E8 /* FuelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelListViewController.swift; sourceTree = "<group>"; };
+		D9918070245753A0007981E8 /* FuelViewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelViewDetailViewController.swift; sourceTree = "<group>"; };
 		D9F644022448A6330074344E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DB6CBF6B4D32F632871294C9 /* Pods-MotorNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorNotes.debug.xcconfig"; path = "Target Support Files/Pods-MotorNotes/Pods-MotorNotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,12 +158,11 @@
 		D94D615324428B2200613DE4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CDAA042424458C7F0017AF8B /* CarViewDetailViewController.swift */,
 				D94D615124428B1600613DE4 /* HomeViewController.swift */,
-				CDAA0422244587AD0017AF8B /* AddCarViewController.swift */,
+				D9FEDB4224575038000027E0 /* Car View Controllers */,
+				D9FEDB4424575058000027E0 /* Service View Controllers */,
+				D9FEDB432457504A000027E0 /* Fuel View Controllers */,
 				D9F644022448A6330074344E /* SettingsViewController.swift */,
-				D9899E6F244A5FC0001549D2 /* AddFuelViewController.swift */,
-				D9899E71244A5FDB001549D2 /* AddServiceViewController.swift */,
 				D94D615024428AEE00613DE4 /* Auth View Controllers */,
 			);
 			path = "View Controllers";
@@ -235,6 +242,35 @@
 				D97FEAF3242DB46100BFDBD5 /* Info.plist */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		D9FEDB4224575038000027E0 /* Car View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDAA0422244587AD0017AF8B /* AddCarViewController.swift */,
+				CDAA042424458C7F0017AF8B /* CarViewDetailViewController.swift */,
+			);
+			path = "Car View Controllers";
+			sourceTree = "<group>";
+		};
+		D9FEDB432457504A000027E0 /* Fuel View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9899E6F244A5FC0001549D2 /* AddFuelViewController.swift */,
+				D991806E2457538B007981E8 /* FuelListViewController.swift */,
+				D9918070245753A0007981E8 /* FuelViewDetailViewController.swift */,
+			);
+			path = "Fuel View Controllers";
+			sourceTree = "<group>";
+		};
+		D9FEDB4424575058000027E0 /* Service View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9899E71244A5FDB001549D2 /* AddServiceViewController.swift */,
+				D991806A2457536B007981E8 /* ServiceListViewController.swift */,
+				D991806C2457537E007981E8 /* ServiceViewDetailViewController.swift */,
+			);
+			path = "Service View Controllers";
 			sourceTree = "<group>";
 		};
 		FB5B0FD14073FBE884F6318E /* Frameworks */ = {
@@ -488,20 +524,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				D94D614D24428AD000613DE4 /* LoginViewController.swift in Sources */,
+				D9918071245753A0007981E8 /* FuelViewDetailViewController.swift in Sources */,
 				D97FEAEA242DB45D00BFDBD5 /* ViewController.swift in Sources */,
 				D9F644032448A6340074344E /* SettingsViewController.swift in Sources */,
 				D936B3B524510D0900916CDC /* CarCell.swift in Sources */,
 				D9899E72244A5FDB001549D2 /* AddServiceViewController.swift in Sources */,
 				CDAA041F2443A7280017AF8B /* SignUpViewController.swift in Sources */,
+				D991806B2457536B007981E8 /* ServiceListViewController.swift in Sources */,
 				CDAA0423244587AD0017AF8B /* AddCarViewController.swift in Sources */,
 				D952D7A32442942500CE239A /* Utilities.swift in Sources */,
 				D936B3AF245004D800916CDC /* Images.swift in Sources */,
+				D991806F2457538B007981E8 /* FuelListViewController.swift in Sources */,
 				D9899E70244A5FC0001549D2 /* AddFuelViewController.swift in Sources */,
 				D97FEAE6242DB45D00BFDBD5 /* AppDelegate.swift in Sources */,
 				D97FEAE8242DB45D00BFDBD5 /* SceneDelegate.swift in Sources */,
 				D94D615224428B1600613DE4 /* HomeViewController.swift in Sources */,
 				D952D7A52442BD8300CE239A /* Constants.swift in Sources */,
 				CDAA042524458C7F0017AF8B /* CarViewDetailViewController.swift in Sources */,
+				D991806D2457537E007981E8 /* ServiceViewDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
