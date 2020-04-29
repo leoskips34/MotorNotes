@@ -127,5 +127,4 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
             }
         }
     }
-
 }
