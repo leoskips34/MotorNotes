@@ -9,11 +9,15 @@
 import UIKit
 
 class ServiceViewDetailViewController: UIViewController {
+    
+    var carID: String = ""
+    var serviceID: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Debug info
+        print("[ServiceViewDetailViewController] - Car ID is: \(carID) and Service ID is: \(serviceID)")
     }
     
 

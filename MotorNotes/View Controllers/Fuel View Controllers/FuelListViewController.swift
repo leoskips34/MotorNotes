@@ -11,17 +11,36 @@ import Firebase
 
 class FuelListViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var carID: String = ""
     var db: Firestore!
+    var fuelList = [[String: String]]()
+    var fuelDocumentID = [String]()
+    var fuelSelectedRow: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Firestore setup
+        db = Firestore.firestore()
 
+        // Debug info
         print("[FuelListViewController] - Car ID is: \(carID)")
-
-        // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    // MARK: - Firestore data loading
+    func loadData() {
+        
+    }
+    
+    // MARK: - TableView Functions
+    
+    // MARK: - Segue Transitioner
 
     /*
     // MARK: - Navigation
