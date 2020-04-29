@@ -9,11 +9,15 @@
 import UIKit
 
 class FuelViewDetailViewController: UIViewController {
+    
+    var carID: String = ""
+    var fuelID: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Debug info
+        print("[FuelViewDetailViewController] - Car ID is: \(carID) and Fuel ID is: \(fuelID)")
     }
     
 
