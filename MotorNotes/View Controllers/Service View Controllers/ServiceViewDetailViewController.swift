@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import Firebase
 
 class ServiceViewDetailViewController: UIViewController {
     
+    @IBOutlet weak var serviceTitleLabel: UILabel!
+    @IBOutlet weak var serviceImageView: UIImageView!
+    @IBOutlet weak var serviceDateLabel: UILabel!
+    @IBOutlet weak var serviceOdometerLabel: UILabel!
+    @IBOutlet weak var serviceTypeLabel: UILabel!
+    @IBOutlet weak var serviceShopNameLabel: UILabel!
+    @IBOutlet weak var serviceShopLocationLabel: UILabel!
+    @IBOutlet weak var serviceTotalCostLabel: UILabel!
+    @IBOutlet weak var serviceNotesLabel: UILabel!
+    
     var carID: String = ""
     var serviceID: String = ""
+    var db: Firestore!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +32,16 @@ class ServiceViewDetailViewController: UIViewController {
         print("[ServiceViewDetailViewController] - Car ID is: \(carID) and Service ID is: \(serviceID)")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Firestore data loading for selected service record
+    func loadServiceData() {
+        
     }
-    */
-
+    
+    // MARK: - Edit Service Record
+    @IBAction func editServiceRecord(_ sender: Any) {
+    }
+    
+    // MARK: - Delete Service Record
+    @IBAction func deleteServiceRecord(_ sender: Any) {
+    }
 }

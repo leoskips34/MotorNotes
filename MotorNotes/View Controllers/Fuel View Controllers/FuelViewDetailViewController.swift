@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import Firebase
 
 class FuelViewDetailViewController: UIViewController {
     
+    @IBOutlet weak var fuelTitleLabel: UILabel!
+    @IBOutlet weak var fuelImageView: UIImageView!
+    @IBOutlet weak var fuelDateLabel: UILabel!
+    @IBOutlet weak var fuelOdometerLabel: UILabel!
+    @IBOutlet weak var fuelGallonsLabel: UILabel!
+    @IBOutlet weak var fuelPricePerGallonLabel: UILabel!
+    @IBOutlet weak var fuelTypeLabel: UILabel!
+    @IBOutlet weak var fuelTotalCostLabel: UILabel!
+    @IBOutlet weak var fuelNotesLabel: UILabel!
+    
     var carID: String = ""
     var fuelID: String = ""
+    var db: Firestore!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +32,17 @@ class FuelViewDetailViewController: UIViewController {
         print("[FuelViewDetailViewController] - Car ID is: \(carID) and Fuel ID is: \(fuelID)")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Firestore data loading for selected fuel record
+    func loadFuelData() {
+        
     }
-    */
-
+    
+    // MARK: - Edit Fuel Record
+    @IBAction func editFuelRecord(_ sender: Any) {
+    }
+    
+    // MARK: - Delete Fuel Record
+    @IBAction func deleteFuelRecord(_ sender: Any) {
+    }
+    
 }
