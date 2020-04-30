@@ -43,6 +43,7 @@ class FuelListViewController: UIViewController, UITableViewDelegate, UITableView
     @objc func loadFuelData() {
         
         fuelList.removeAll()
+        fuelDocumentID.removeAll()
         
         let fuel = db.collection("users").document(Constants.Authentication.user).collection("cars").document(carID).collection("fuelrecords")
         

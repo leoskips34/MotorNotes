@@ -43,6 +43,7 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
     @objc func loadServiceData() {
         
         serviceList.removeAll()
+        serviceDocumentID.removeAll()
         
         let service = db.collection("users").document(Constants.Authentication.user).collection("cars").document(carID).collection("servicerecords")
         
