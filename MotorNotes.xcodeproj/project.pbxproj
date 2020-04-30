@@ -12,6 +12,8 @@
 		CDAA0423244587AD0017AF8B /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA0422244587AD0017AF8B /* AddCarViewController.swift */; };
 		CDAA042524458C7F0017AF8B /* CarViewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA042424458C7F0017AF8B /* CarViewDetailViewController.swift */; };
 		D5335A7C336C9CDCB1C953DF /* Pods_MotorNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76CCFD98BB5199E4E801E50 /* Pods_MotorNotes.framework */; };
+		D92B000C2459E46E00CE8681 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B000B2459E46D00CE8681 /* ServiceCell.swift */; };
+		D92B000E2459E48100CE8681 /* FuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B000D2459E48100CE8681 /* FuelCell.swift */; };
 		D936B3AB244D407C00916CDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D936B3AA244D407C00916CDC /* GoogleService-Info.plist */; };
 		D936B3AF245004D800916CDC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936B3AE245004D800916CDC /* Images.swift */; };
 		D936B3B524510D0900916CDC /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936B3B424510D0900916CDC /* CarCell.swift */; };
@@ -66,6 +68,8 @@
 		CDAA0422244587AD0017AF8B /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 		CDAA042424458C7F0017AF8B /* CarViewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewDetailViewController.swift; sourceTree = "<group>"; };
 		CE21C6AC7C606537DDE631E8 /* Pods_MotorNotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorNotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92B000B2459E46D00CE8681 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		D92B000D2459E48100CE8681 /* FuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelCell.swift; sourceTree = "<group>"; };
 		D936B3AA244D407C00916CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D936B3AE245004D800916CDC /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		D936B3B424510D0900916CDC /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
@@ -138,12 +142,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D936B3B324510C9F00916CDC /* TableView Cells */ = {
+		D936B3B324510C9F00916CDC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				D936B3B424510D0900916CDC /* CarCell.swift */,
+				D92B000B2459E46D00CE8681 /* ServiceCell.swift */,
+				D92B000D2459E48100CE8681 /* FuelCell.swift */,
 			);
-			path = "TableView Cells";
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D94D615024428AEE00613DE4 /* Auth View Controllers */ = {
@@ -210,7 +216,7 @@
 				D97FEAEE242DB46100BFDBD5 /* Assets.xcassets */,
 				D97FEAF0242DB46100BFDBD5 /* LaunchScreen.storyboard */,
 				D952D7A12442940700CE239A /* Helpers */,
-				D936B3B324510C9F00916CDC /* TableView Cells */,
+				D936B3B324510C9F00916CDC /* Cells */,
 				D94D615324428B2200613DE4 /* View Controllers */,
 				D97FEB1D243EFD4200BFDBD5 /* Settings */,
 			);
@@ -525,6 +531,7 @@
 			files = (
 				D94D614D24428AD000613DE4 /* LoginViewController.swift in Sources */,
 				D9918071245753A0007981E8 /* FuelViewDetailViewController.swift in Sources */,
+				D92B000E2459E48100CE8681 /* FuelCell.swift in Sources */,
 				D97FEAEA242DB45D00BFDBD5 /* ViewController.swift in Sources */,
 				D9F644032448A6340074344E /* SettingsViewController.swift in Sources */,
 				D936B3B524510D0900916CDC /* CarCell.swift in Sources */,
@@ -540,6 +547,7 @@
 				D97FEAE8242DB45D00BFDBD5 /* SceneDelegate.swift in Sources */,
 				D94D615224428B1600613DE4 /* HomeViewController.swift in Sources */,
 				D952D7A52442BD8300CE239A /* Constants.swift in Sources */,
+				D92B000C2459E46E00CE8681 /* ServiceCell.swift in Sources */,
 				CDAA042524458C7F0017AF8B /* CarViewDetailViewController.swift in Sources */,
 				D991806D2457537E007981E8 /* ServiceViewDetailViewController.swift in Sources */,
 			);

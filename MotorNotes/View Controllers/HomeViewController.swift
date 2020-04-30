@@ -78,7 +78,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     self.carArray.append(newCar)
                     self.carDocumentId.append(document.documentID)
-                    print("Document ID: \(document.documentID) for car \(carNickname)")
+                    
+                    // Debug info
+                    print("[HomeViewController] Document ID: \(document.documentID) for car \(carNickname)")
                     print(self.carArray)
                 }
                 
@@ -151,6 +153,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: Constants.Storyboard.viewCarSegueIdentifier, sender: self)
     }
     
+    // MARK: - Segue Transitioner
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == Constants.Storyboard.viewCarSegueIdentifier {
