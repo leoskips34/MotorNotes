@@ -44,6 +44,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func loadData() {
         
         carArray.removeAll()
+        carDocumentId.removeAll()
         
         db.collection("users").document(Constants.Authentication.user).collection("cars").getDocuments() { (querySnapshot, err) in
             if let err = err {
