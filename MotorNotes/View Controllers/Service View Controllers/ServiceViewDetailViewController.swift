@@ -28,6 +28,10 @@ class ServiceViewDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        db = Firestore.firestore()
+        
+        loadServiceData()
+        
         // Debug info
         print("[ServiceViewDetailViewController] - Car ID is: \(carID) and Service ID is: \(serviceID)")
     }
@@ -35,6 +39,41 @@ class ServiceViewDetailViewController: UIViewController {
     // MARK: - Firestore data loading for selected service record
     func loadServiceData() {
         
+        let selectedServiceRecord = db.collection("users").document(Constants.Authentication.user).collection("cars").document(carID).collection("servicerecords").document(serviceID)
+        
+        selectedServiceRecord.getDocument { (document, error) in
+            if let document = document, document.exists {
+                
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                
+                // Create cleaned data from query
+                let data = document.data()!
+                let serviceTitle = data["servicerecordtitle"] as? String ?? ""
+                let serviceDate = data["servicedate"] as? String ?? ""
+                let serviceOdometer = data["serviceodometer"] as? String ?? ""
+                let serviceType = data["servicetype"] as? String ?? ""
+                let serviceShopName = data["serviceshopname"] as? String ?? ""
+                let serviceShopLocation = data["serviceshoplocation"] as? String ?? ""
+                let serviceTotalCost = data["servicetotalcost"] as? String ?? ""
+                let serviceNotes = data["servicenotes"] as? String ?? ""
+                
+                // Assign label text to cleaned data
+                self.serviceTitleLabel.text = serviceTitle
+                self.serviceDateLabel.text = serviceDate
+                self.serviceOdometerLabel.text = serviceOdometer
+                self.serviceTypeLabel.text = serviceType
+                self.serviceShopNameLabel.text = serviceShopName
+                self.serviceShopLocationLabel.text = serviceShopLocation
+                self.serviceTotalCostLabel.text = serviceTotalCost
+                self.serviceNotesLabel.text = serviceNotes
+                
+                // Debug info
+                print("[ServiceViewDetailViewController] Service Title test: ")
+                print("[ServiceViewDetailViewController] Document data: \(dataDescription)")
+            } else {
+                print("[ServiceViewDetailViewController] Error reading document")
+            }
+        }
     }
     
     // MARK: - Edit Service Record

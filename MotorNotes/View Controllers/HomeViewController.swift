@@ -17,8 +17,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var menuOut = false
     var db: Firestore!
-    var carArray = [[String: String]]()
-    var carDocumentId = [String]()
+    var carList = [[String: String]]()
+    var carDocumentID = [String]()
     var carSelectedRow: Int?
     
     override func viewDidLoad() {
@@ -43,8 +43,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - Firestore data loading
     @objc func loadData() {
         
-        carArray.removeAll()
-        carDocumentId.removeAll()
+        carList.removeAll()
+        carDocumentID.removeAll()
         
         db.collection("users").document(Constants.Authentication.user).collection("cars").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -77,12 +77,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         "carcolor": carColor,
                     ]
                     
-                    self.carArray.append(newCar)
-                    self.carDocumentId.append(document.documentID)
+                    self.carList.append(newCar)
+                    self.carDocumentID.append(document.documentID)
                     
                     // Debug info
                     print("[HomeViewController] Document ID: \(document.documentID) for car \(carNickname)")
-                    print(self.carArray)
+                    print(self.carList)
                 }
                 
                 DispatchQueue.main.async {
@@ -122,7 +122,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - TableView functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return carArray.count
+        return carList.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -137,7 +137,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             fatalError("The dequeued cell is not an instance of CarCell")
         }
         
-        let car = carArray[indexPath.row]
+        let car = carList[indexPath.row]
         
         cell.carNicknameLabel.text = car["carnickname"]
         cell.carOdometerLabel.text = car["odometer"]
@@ -160,7 +160,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if segue.identifier == Constants.Storyboard.viewCarSegueIdentifier {
             
             if let destVC = segue.destination as? CarViewDetailViewController {
-                destVC.carID = carDocumentId[carSelectedRow!]
+                destVC.carID = carDocumentID[carSelectedRow!]
             }
         }
     }

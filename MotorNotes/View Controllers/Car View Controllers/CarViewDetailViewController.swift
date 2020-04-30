@@ -87,8 +87,8 @@ class CarViewDetailViewController: UIViewController {
                 self.carColorLabel.text = carColor
                 
                 // Debug info
-                print("Car Nickname test: \(carNickname)")
-                print("Document data: \(dataDescription)")
+                print("[CarViewDetailViewController] Car Nickname test: \(carNickname)")
+                print("[CarViewDetailViewController] Document data: \(dataDescription)")
             } else {
                 print("Error reading document")
             }
