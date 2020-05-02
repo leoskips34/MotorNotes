@@ -27,14 +27,14 @@ Keep track of all your car related needs, from keeping track of mileage to track
 
 **Required Must-have Stories**
 
-[x] User sees app icon in home screen and styled launch screen
-[x] User can log in and log out
-[x] User stays logged in across restarts.
-[x] User can create a vehicle.
-[x] User can record information about their vehicle.
-- [] User can create service records for their vehicle.
-- [] User can create fuel records for their vehicle.
-- [] User can access information related to their vehicle.
+- [x] User sees app icon in home screen and styled launch screen
+- [x] User can log in and log out
+- [x] User stays logged in across restarts.
+- [x] User can create a vehicle.
+- [x] User can record information about their vehicle.
+- [x] User can create service records for their vehicle.
+- [x] User can create fuel records for their vehicle.
+- [x] User can access information related to their vehicle.
 - [] User can change settings for their vehicle.
 - [] User can update information and records for their vehicle.
 - [] User can delete information and records for their vehicle.
@@ -52,29 +52,29 @@ Keep track of all your car related needs, from keeping track of mileage to track
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+#### User sees app icon in home screen and styled launch screen
+<img src="images/app_icon.png" width=400> 
+<img src="images/launch_screen.png" width=400>
 
-### 3. Navigation
+#### User can log in and log out
+<img src="images/login.png" width=400> 
+<img src="images/settings_logout.png" width=400>
 
-**Tab Navigation** (Tab to Screen)
+#### User can create a vehicle
+<img src="images/add_car.png" width=400>
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+#### User can record information about their vehicle
+<img src="images/car_detail.png" width=400>
 
-**Flow Navigation** (Screen to Screen)
+#### User can create service records for their vehicle
+<img src="images/add_service.png" width=400>
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+#### User can create fuel records for their vehicle
+<img src="images/add_fuel.png" width=400>
+
+#### User can access information related to their vehicle
+<img src="images/service_records_list.png" width=400> 
+<img src="images/fuel_records_list.png" width=400>
 
 ## Wireframes
 <img src="wireframes/design_mockup_car_view.png" width=600>
@@ -161,4 +161,25 @@ Keep track of all your car related needs, from keeping track of mileage to track
 
 ## Build Progresses
 
-<img src='gifs/build_progress_1.gif' title='Build Progress 1' alt='Build Progress 1' />
+### Build Progress 1
+#### Logging In
+
+<img src='gifs/logging_in.gif' title='Logging In' alt='Logging In' width=400 />
+
+### Build Progress 2
+#### Adding a Car
+
+<img src='gifs/adding_new_car.gif' title='Adding a car' alt='Adding a car' width=400 />
+
+#### Adding a service record to a car
+
+<img src='gifs/adding_service_record.gif' title='Adding Service Record' alt='Adding Service Record' width=400 />
+
+#### Adding a fuel record to a car
+
+<img src='gifs/adding_fuel_record.gif' title='Adding Fuel Record' alt='Adding Fuel Record' width=400 />
+
+### Build Progress 3
+#### View Service Record Detail
+
+<img src='gifs/view_service_record_detail.gif' title='View service record detail' alt='View service record detail' width=400 />
