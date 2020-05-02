@@ -52,20 +52,29 @@ Keep track of all your car related needs, from keeping track of mileage to track
 
 ### 2. Screen Archetypes
 
-* <img src="images/app_icon.png" width=400> <img src="launch_screen.png" width=400>
-   * [x] User sess app icon in home screen and styled launch screen
-* <img src="images/login.png" width=400> <img src="images/logout.png" width=400>
-   * [x] User can log in and log out
-* <img src="images/add_car.png" width=400>
-   * [x] User can create a vehicle
-* <img src="images/car_detail.png" width=400>
-   * [x] User can record information about their vehicle
-* <img src="images/add_service.png" width=400>
-   * [x] User can create service records for their vehicle
-* <img src="images/add_fuel.png" width=400>
-   * [x] User can create fuel records for their vehicle
-* <img src="images/service_records_list.png" width=400> <img src="images/fuel_records_list.png" width=400>
-   * [x] User can access information related to their vehicle
+#### User sees app icon in home screen and styled launch screen
+<img src="images/app_icon.png" width=400> 
+<img src="images/launch_screen.png" width=400>
+
+#### User can log in and log out
+<img src="images/login.png" width=400> 
+<img src="images/settings_logout.png" width=400>
+
+#### User can create a vehicle
+<img src="images/add_car.png" width=400>
+
+#### User can record information about their vehicle
+<img src="images/car_detail.png" width=400>
+
+#### User can create service records for their vehicle
+<img src="images/add_service.png" width=400>
+
+#### User can create fuel records for their vehicle
+<img src="images/add_fuel.png" width=400>
+
+#### User can access information related to their vehicle
+<img src="images/service_records_list.png" width=400> 
+<img src="images/fuel_records_list.png" width=400>
 
 ## Wireframes
 <img src="wireframes/design_mockup_car_view.png" width=600>
@@ -155,22 +164,22 @@ Keep track of all your car related needs, from keeping track of mileage to track
 ### Build Progress 1
 #### Logging In
 
-<img src='gifs/logging_in.gif' title='Logging In' alt='Logging In' />
+<img src='gifs/logging_in.gif' title='Logging In' alt='Logging In' width=400 />
 
 ### Build Progress 2
 #### Adding a Car
 
-<img src='gifs/adding_new_car.gif' title='Adding a car' alt='Adding a car' />
+<img src='gifs/adding_new_car.gif' title='Adding a car' alt='Adding a car' width=400 />
 
 #### Adding a service record to a car
 
-<img src='gifs/adding_service_record.gif' title='Adding Service Record' alt='Adding Service Record' />
+<img src='gifs/adding_service_record.gif' title='Adding Service Record' alt='Adding Service Record' width=400 />
 
 #### Adding a fuel record to a car
 
-<img src='gifs/adding_fuel_record.gif' title='Adding Fuel Record' alt='Adding Fuel Record' />
+<img src='gifs/adding_fuel_record.gif' title='Adding Fuel Record' alt='Adding Fuel Record' width=400 />
 
 ### Build Progress 3
 #### View Service Record Detail
 
-<img src='gifs/view_service_record_detail.gif' title='View service record detail' alt='View service record detail' />
+<img src='gifs/view_service_record_detail.gif' title='View service record detail' alt='View service record detail' width=400 />
